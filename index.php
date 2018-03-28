@@ -79,6 +79,7 @@ include("functions/functions.php");
 							<td><span style='color:white;'>Select Category</span></td>
 							<td align="right">
 								<select name='filter_cat'>
+									<option value='0'>All</option>
 									
 									<?php
 										include('includes/db.php');
@@ -101,6 +102,7 @@ include("functions/functions.php");
 							<td><span style='color:white;'>Select Brand</span></td>
 							<td align="right">
 								<select name='filter_brand' >
+									<option value='0'>All</option>
 									
 									<?php
 										include('includes/db.php');
@@ -209,6 +211,6 @@ include("functions/functions.php");
 <?php
 if(isset($_POST['filter'])){
 	
-	echo $_POST['order'];
+	echo $_POST['filter_cat'];
 }
 ?>

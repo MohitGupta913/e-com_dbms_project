@@ -276,11 +276,38 @@ function filter(){
 		global $con;
 		$pro_cat = $_POST['filter_cat'] ;
 		$pro_brand = $_POST['filter_brand'] ;
+		if($pro_cat!=0 && $pro_brand!=0){
 		if($_POST['order']==1){
 			$fetch_pro = "select * from products where product_cat='$pro_cat' and product_brand='$pro_brand' order by product_price asc";
 		}
 		else if($_POST['order']==2 ){
 			$fetch_pro = "select * from products where product_cat='$pro_cat' and product_brand='$pro_brand' order by product_price desc";
+		}
+	}
+
+		else if($pro_cat!=0 && $pro_brand==0){
+			if($_POST['order']==1){
+				$fetch_pro = "select * from products where product_cat='$pro_cat'  order by product_price asc";
+			}
+			else if($_POST['order']==2 ){
+				$fetch_pro = "select * from products where product_cat='$pro_cat'  order by product_price desc";
+			}
+		}
+		else if($pro_cat==0 && $pro_brand!=0){
+			if($_POST['order']==1){
+				$fetch_pro = "select * from products where  product_brand='$pro_brand' order by product_price asc";
+			}
+			else if($_POST['order']==2 ){
+				$fetch_pro = "select * from products where product_brand='$pro_brand' order by product_price desc";
+			}
+		}
+		else{
+			if($_POST['order']==1){
+				$fetch_pro = "select * from products order by product_price asc";
+			}
+			else if($_POST['order']==2 ){
+				$fetch_pro = "select * from products order by product_price desc";
+			}
 		}
 	
 		$run_pro = mysqli_query($con, $fetch_pro);

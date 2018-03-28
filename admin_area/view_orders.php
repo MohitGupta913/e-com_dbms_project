@@ -14,7 +14,6 @@
 		<th>Invoice No</th>
 		<th>Order Date</th>
 		<th>Status</th>
-		<th>Action</th>
 	</tr>
 	<?php 
 	include("includes/db.php");
@@ -66,8 +65,13 @@
 		<td><?php echo $amt.' ' .$curr;?></td>
 		<td><?php echo $invoice_no;?></td>
 		<td><?php echo $order_date;?></td>
-		<td><?php echo $status;?></td>
-		<td><a href="index.php?confirm_order=<?php echo $order_id; ?>">Complete Order</a></td>
+		<?php
+		if($status == 'Shipped')
+			echo "<td>$status</td>";
+		else
+			echo "<td><a href='index.php?confirm_order= $order_id'> Complete Order</a></td>";
+		?>
+		
 	
 	</tr>
 	<?php } ?>

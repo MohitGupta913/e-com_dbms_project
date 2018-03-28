@@ -69,6 +69,67 @@ include("functions/functions.php");
 					<?php getBrands(); ?>
 				
 				<ul>
+				<div id="sidebar_title">Filter</div>
+				
+				<ul id="cats">
+					
+					<form action='' method='post'>
+					<table align='center'>
+						<tr>
+							<td><span style='color:white;'>Select Category</span></td>
+							<td align="right">
+								<select name='filter_cat'>
+									
+									<?php
+										include('includes/db.php');
+										$get_cat = 'select * from categories';
+										$run_cat = mysqli_query($con, $get_cat); 
+										
+										while($row_cat=mysqli_fetch_array($run_cat)){
+											$cat_id = $row_cat['cat_id'];
+											$cat_title = $row_cat['cat_title'];
+											echo "
+												<option value='$cat_id'>$cat_title</option>
+											";
+											
+										}
+									?>
+								</select>
+						</tr><br>
+
+						<tr>
+							<td><span style='color:white;'>Select Brand</span></td>
+							<td align="right">
+								<select name='filter_brand' >
+									
+									<?php
+										include('includes/db.php');
+										$get_brand = 'select * from brands';
+										$run_brand = mysqli_query($con, $get_brand); 
+										
+										while($row_brand=mysqli_fetch_array($run_brand)){
+											$brand_id = $row_brand['brand_id'];
+											$brand_title = $row_brand['brand_title'];
+											echo "
+												<option value='$brand_id'>$brand_title</option>
+											";
+											
+										}
+									?>
+								</select>
+						</tr>
+						<tr>
+							<td><span style='color:white;'>Order</span></td>
+							<td align="right"><select name='order'>
+								<option value='1'>Price Low to High</option>
+								<option value='2'>Price High to Low</option>
+							</select></td>
+						</tr>
+						</table><br>
+						<input type='submit' name='filter' value='Filter'>
+					</form>
+				
+				<ul>
 			
 			
 			</div>
@@ -117,7 +178,7 @@ include("functions/functions.php");
 				<?php getPro(); ?>
 				<?php getCatPro(); ?>
 				<?php getBrandPro(); ?>
-				
+				<?php filter(); ?>
 				</div>
 			
 			</div>
@@ -143,3 +204,11 @@ include("functions/functions.php");
 
 </body>
 </html>
+
+
+<?php
+if(isset($_POST['filter'])){
+	
+	echo $_POST['order'];
+}
+?>

@@ -74,9 +74,10 @@ include("functions/functions.php");
 				<ul id="cats">
 					
 					<form action='' method='post'>
+					<table align='center'>
 						<tr>
 							<td><span style='color:white;'>Select Category</span></td>
-							<td>
+							<td align="right">
 								<select name='filter_cat'>
 									
 									<?php
@@ -94,12 +95,12 @@ include("functions/functions.php");
 										}
 									?>
 								</select>
-						</tr>
+						</tr><br>
 
 						<tr>
 							<td><span style='color:white;'>Select Brand</span></td>
-							<td>
-								<select name='filter_brand'>
+							<td align="right">
+								<select name='filter_brand' >
 									
 									<?php
 										include('includes/db.php');
@@ -119,12 +120,13 @@ include("functions/functions.php");
 						</tr>
 						<tr>
 							<td><span style='color:white;'>Order</span></td>
-							<td><select name='order'>
+							<td align="right"><select name='order'>
 								<option value='1'>Price Low to High</option>
 								<option value='2'>Price High to Low</option>
 							</select></td>
 						</tr>
-						<input type='submit' name='filter' value='filter'>Filter</input>
+						</table><br>
+						<input type='submit' name='filter' value='Filter'>
 					</form>
 				
 				<ul>

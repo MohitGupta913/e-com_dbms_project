@@ -107,7 +107,7 @@ include("functions/functions.php");
 				}
 				else {
 				
-				include("payment.php");
+				include("making_order.php");
 				
 				}
 				

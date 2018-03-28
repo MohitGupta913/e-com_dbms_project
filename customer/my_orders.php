@@ -24,7 +24,7 @@
 	
 	while ($row_order=mysqli_fetch_array($run_order)){
 		
-		$order_id = $row_order['product_id'];
+		$order_id = $row_order['order_id'];
 		$qty = $row_order['qty'];
 		$pro_id = $row_order['p_id'];
 		$invoice_no = $row_order['invoice_no'];
@@ -45,7 +45,7 @@
 		<td><?php echo $i;?></td>
 		<td>
 		<?php echo $pro_title;?>
-		<img src="admin_area/product_images/<?php echo $pro_image;?>" width="50" height="50" />
+		<img src="../admin_area/product_images/<?php echo $pro_image;?>" width="50" height="50" />
 		</td>
 		<td><?php echo $qty;?></td>
 		<td><?php echo $invoice_no;?></td>

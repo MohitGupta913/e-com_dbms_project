@@ -109,6 +109,9 @@ else {
 		include("view_payments.php"); 
 		
 		}
+		if(isset($_GET['confirm_order'])){
+			include("complete_order.php"); 
+		}
 		?>
 		</div>
 

@@ -1,3 +1,11 @@
+<?php
+	if(!isset($_SESSION['customer_email'])){
+		echo "<script>window.open('../checkout.php','_self')</script>";
+	}
+	else{
+?>
+
+
 <h2 style="text-align:center;">Change Your Password</h2>
 <form action="" method="post"> 
 	
@@ -72,3 +80,5 @@ include("includes/db.php");
 
 ?>
 
+
+	<?php } ?>

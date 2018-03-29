@@ -1,3 +1,11 @@
+<?php
+	if(!isset($_SESSION['customer_email'])){
+		echo "<script>window.open('../checkout.php','_self')</script>";
+	}
+	else{
+?>
+
+
 <table width="795" align="center" bgcolor="pink"> 
 
 	
@@ -55,3 +63,5 @@
 	</tr>
 	<?php } ?>
 </table>
+
+	<?php } ?>

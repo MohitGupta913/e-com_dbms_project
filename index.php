@@ -208,9 +208,3 @@ include("functions/functions.php");
 </html>
 
 
-<?php
-if(isset($_POST['filter'])){
-	
-	echo $_POST['filter_cat'];
-}
-?>

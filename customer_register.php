@@ -9,10 +9,16 @@ include("includes/db.php");
 		<title>My Online Shop</title>
 		
 		
-	<link rel="stylesheet" href="styles/style.css" media="all" /> 
+	<meta charset="utf-8"> 
+    <meta name="viewport" content="width=1000px, initial-scale=1">	 
+	<link rel="stylesheet" href="styles/style.css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 	</head>
 	
-<body>
+<body background="images/ecommerce2.jpg" >
 	
 	<!--Main Container starts here-->
 	<div class="main_wrapper">
@@ -20,58 +26,57 @@ include("includes/db.php");
 		<!--Header starts here-->
 		<div class="header_wrapper">
 		
-			<a href="index.php"><img id="logo" src="images/logo.gif" /> </a>
-			<img id="banner" src="images/ad_banner.gif" />
+			<a href="index.php"><img id="logo" src="images/logo_new.jpg" /> </a>
+			<img id="banner" src="images/jet-1.gif" />
 		</div>
 		<!--Header ends here-->
 		
 		<!--Navigation Bar starts-->
-		<div class="menubar">
-			
-			<ul id="menu">
-				<li><a href="index.php">Home</a></li>
-				<li><a href="all_products.php">All Products</a></li>
-				<li><a href="customer/my_account.php">My Account</a></li>
-				<li><a href="#">Sign Up</a></li>
-				<li><a href="cart.php">Shopping Cart</a></li>
-				<li><a href="#">Contact Us</a></li>
-			
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <ul class="nav navbar-nav">
+			  <li><a href="index.php">Home</a></li>
+			  <li><a href="all_products.php">All Products</a></li>
+			  <li><a href="customer/my_account.php">My Account</a></li>
+	          <li><a href="#">Sign Up</a></li>
+			  <li><a href="cart.php">Shopping Cart</a></li>
+			  <li><a href="#">Contact Us</a></li>
 			</ul>
-			
-			<div id="form">
-				<form method="get" action="results.php" enctype="multipart/form-data">
-					<input type="text" name="user_query" placeholder="Search a Product"/ > 
-					<input type="submit" name="search" value="Search" />
-				</form>
-			
-			</div>
-			
-		</div>
+			<form class="navbar-form navbar-left" action="results.php" enctype="multipart/form-data" method="get">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="user_query">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" name="search">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+              </div>
+            </form>
+
+		  
+		  </div>
+		</nav>
 		<!--Navigation Bar ends-->
 	
 		<!--Content wrapper starts-->
 		<div class="content_wrapper">
 		
-			<div id="sidebar">
-			
-				<div id="sidebar_title">Categories</div>
-				
-				<ul id="cats">
-				
-				<?php getCats(); ?>
-				
-				<ul>
-					
-				<div id="sidebar_title">Brands</div>
-				
-				<ul id="cats">
-					
-					<?php getBrands(); ?>
-				
-				<ul>
-			
-			
-			</div>
+			<nav id="sidebar">
+			  <div class="sidebar-header">
+			    <h3>Categories</h3>
+			  </div>
+			  <ul class="list-unstyled components">
+			    <?php getCats(); ?>
+			  </ul>
+			  <div class="sidebar-header">
+			    <h3>Brands</h3>
+			  </div>
+			  <ul class="list-unstyled components">
+			    <?php getBrands(); ?>
+			  </ul>
+			  
+			</nav>
+		
 		
 			<div id="content_area">
 			
@@ -81,7 +86,7 @@ include("includes/db.php");
 					
 					<span style="float:right; font-size:18px; padding:5px; line-height:40px;">
 					
-					Welcome Guest! <b style="color:yellow">Shopping Cart -</b> Total Items: <?php total_items();?> Total Price: <?php total_price(); ?> <a href="cart.php" style="color:yellow">Go to Cart</a>
+					Welcome Guest! <b style="color:yellow">Shopping Cart -</b> Total Items: <?php total_items();?> Total Price: <?php total_price(); ?> <a href="cart.php" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
 					
 					
 					
@@ -154,7 +159,7 @@ include("includes/db.php");
 						
 						
 					<tr align="center">
-						<td colspan="6"><input type="submit" name="register" value="Create Account" /></td>
+						<td colspan="6"> <input class="btn btn-primary" type="submit" value="Create Account" name="register"></td>
 					</tr>
 					
 					
@@ -170,6 +175,12 @@ include("includes/db.php");
 		
 		
 		<div id="footer">
+		<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
 		
 		<h2 style="text-align:center; padding-top:30px;">&copy; 2014 by www.OnlineTuting.com</h2>
 		

@@ -23,18 +23,18 @@ include("includes/db.php");
 			</tr>
 			
 			<tr align="center">
-				<td colspan="3"><a href="checkout.php?forgot_pass">Forgot Password?</a></td>
+				<td colspan="3"><a href="checkout.php?forgot_pass" style="color:black">Forgot Password?</a></td>
 			</tr>
 			
 			<tr align="center">
-				<td colspan="3"><input type="submit" name="login" value="Login" /></td>
+				<td colspan="3">  <input class="btn btn-primary" type="submit" value="Login" name="login"></td>
 			</tr>
 			
 		
 		
 		</table> 
 	
-			<h2 style="float:right; padding-right:20px;"><a href="customer_register.php" style="text-decoration:none;">New? Register Here</a></h2>
+			<h2 style="float:right; padding-right:20px;"><a href="customer_register.php" style="text-decoration:none; color:black">New? Register Here</a></h2>
 	
 	
 	</form>

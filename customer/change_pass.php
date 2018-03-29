@@ -18,7 +18,7 @@
 	</tr>
 	
 	<tr align="center">
-	<td colspan="3"><input type="submit" name="change_pass" value="Change Password" class="btn btn-warning"/></td>
+	<td colspan="3"><input type="submit" name="change_pass" value="Change Password"/></td>
 	</tr>
 	
 	</table>

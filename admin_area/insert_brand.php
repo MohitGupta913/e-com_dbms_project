@@ -1,7 +1,17 @@
+<?php 
+
+
+if(!isset($_SESSION['user_email'])){
+	
+	echo "<script>window.open('login.php?not_admin=You are not an Admin!','_self')</script>";
+}
+else {
+
+?>
 
 <form action="" method="post" style="padding:80px;">
 
-<b>Insert New Bran:</b>
+<b>Insert New Brand:</b>
 <input type="text" name="new_brand" required/> 
 <input type="submit" name="add_brand" value="Add Brand" /> 
 
@@ -26,3 +36,5 @@ include("includes/db.php");
 	}
 
 ?>
+
+<?php } ?>

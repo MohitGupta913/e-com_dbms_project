@@ -88,7 +88,7 @@
 						
 						
 					<tr align="center">
-						<td colspan="6"><input type="submit" name="update" value="Update Account" class="btn btn-warning"/></td>
+						<td colspan="6"><input type="submit" name="update" value="Update Account" /></td>
 					</tr>
 					
 					

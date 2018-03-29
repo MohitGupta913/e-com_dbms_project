@@ -99,7 +99,19 @@ else {
 		include("view_customers.php"); 
 		
 		}
+		if(isset($_GET['view_orders'])){
 		
+		include("view_orders.php"); 
+		
+		}
+		if(isset($_GET['view_payments'])){
+		
+		include("view_payments.php"); 
+		
+		}
+		if(isset($_GET['confirm_order'])){
+			include("complete_order.php"); 
+		}
 		?>
 		</div>
 

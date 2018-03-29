@@ -6,8 +6,8 @@
 <form action="" method="post">
 
 <br>
-<input type="submit" name="yes" value="Yes I want" class="btn btn-danger" /> 
-<input type="submit" name="no" value="No I was Joking" class="btn btn-danger"/>
+<input type="submit" name="yes" value="Yes I want" /> 
+<input type="submit" name="no" value="No I was Joking" />
 
 
 </form>

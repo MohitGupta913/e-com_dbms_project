@@ -32,14 +32,14 @@ include("functions/functions.php");
 				<li><a href="../index.php">Home</a></li>
 				<li><a href="../all_products.php">All Products</a></li>
 				<li><a href="">My Account</a></li>
-				<li><a href="#">Sign Up</a></li>
+				<li><a href="../checkout.php">Sign Up</a></li>
 				<li><a href="../cart.php">Shopping Cart</a></li>
 				<li><a href="#">Contact Us</a></li>
 			
 			</ul>
 			
 			<div id="form">
-				<form method="get" action="results.php" enctype="multipart/form-data">
+				<form method="get" action="../results.php" enctype="multipart/form-data">
 					<input type="text" name="user_query" placeholder="Search a Product"/ > 
 					<input type="submit" name="search" value="Search" />
 				</form>
@@ -58,7 +58,12 @@ include("functions/functions.php");
 				
 				<ul id="cats">
 				<?php 
+				if(isset($_SESSION['customer_email'])){
 				$user = $_SESSION['customer_email'];
+				}
+				else{
+					$user = "";
+				}
 				
 				$get_img = "select * from customers where customer_email='$user'";
 				

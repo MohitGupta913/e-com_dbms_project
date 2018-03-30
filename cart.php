@@ -121,7 +121,7 @@ include("includes/db.php");
 						<th>Remove</th>
 						<th>Product(S)</th>
 						<th>Quantity</th>
-						<th>Total Price</th>
+						<th>Price per Unit</th>
 					</tr>
 					
 		<?php 
@@ -138,6 +138,7 @@ include("includes/db.php");
 		while($p_price=mysqli_fetch_array($run_price)){
 			
 			$pro_id = $p_price['p_id']; 
+			$pro_qty = $p_price['qty'];
 			
 			$pro_price = "select * from products where product_id='$pro_id'";
 			
@@ -154,35 +155,22 @@ include("includes/db.php");
 			$single_price = $pp_price['product_price'];
 			
 			$values = array_sum($product_price); 
+			$values*=$pro_qty;
 			
 			$total += $values; 
 					
 					?>
 					
 					<tr align="center">
-						<td><input type="checkbox" name="remove[]" value="<?php echo $pro_id;?>"/></td>
+						<td><input type="checkbox" name="remove[]" value="<?php echo $pro_id; ?>"/></td>
 						<td><?php echo $product_title; ?><br>
 						<img src="admin_area/product_images/<?php echo $product_image;?>" width="60" height="60"/>
 						</td>
-						<td><input type="text" size="4" name="qty" value="<?php echo $_SESSION['qty'];?>"/></td>
-						<?php 
-						if(isset($_POST['update_cart'])){
-						
-							$qty = $_POST['qty'];
-							
-							$update_qty = "update cart set qty='$qty'";
-							
-							$run_qty = mysqli_query($con, $update_qty); 
-							
-							$_SESSION['qty']=$qty;
-							
-							$total = $total*$qty;
-						}
-						
-						
-						?>
-						
-						
+						<td>
+						<button name="cha_qty[]" value="<?php echo $pro_id; ?>">-</button>
+						<input type="text" size="4" name="qty" placeholder="<?php echo $pro_qty; ?>" disabled />
+						<button name="ch_qty[]" value="<?php echo $pro_id; ?>">+</button>
+						</td>		
 						<td><?php echo "$" . $single_price; ?></td>
 					</tr>
 					
@@ -205,6 +193,44 @@ include("includes/db.php");
 			</form>
 			
 	<?php 
+
+if(isset($_POST['ch_qty'])){
+							
+	foreach($_POST['ch_qty'] as $change_qty){
+	
+	$update_qty = "update cart set qty=qty+1 where p_id='$change_qty' AND ip_add='$ip'";
+	
+	$run_update = mysqli_query($con, $update_qty); 
+	
+	
+	if($run_update){
+	
+	echo "<script>window.open('cart.php','_self')</script>";
+	
+	}
+	
+	}
+
+}
+
+if(isset($_POST['cha_qty'])){
+							
+	foreach($_POST['cha_qty'] as $change_qty){
+	
+	$update_qty = "update cart set qty=qty-1 where p_id='$change_qty' AND ip_add='$ip' AND qty>1";
+	
+	
+	$run_update = mysqli_query($con, $update_qty); 
+	
+	
+	if($run_update){
+	
+	echo "<script>window.open('cart.php','_self')</script>";
+	
+	}
+	}
+
+}
 		
 	function updatecart(){
 		

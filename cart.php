@@ -170,29 +170,7 @@ include("includes/db.php");
 						<button name="cha_qty[]" value="<?php echo $pro_id; ?>">-</button>
 						<input type="text" size="4" name="qty" placeholder="<?php echo $pro_qty; ?>" disabled />
 						<button name="ch_qty[]" value="<?php echo $pro_id; ?>">+</button>
-						</td>
-						<?php 
-
-						
-
-
-						if(isset($_POST['update_cart'])){
-						
-							$qty = $_POST['qty'];
-							
-							$update_qty = "update cart set qty='$qty'";
-							
-							$run_qty = mysqli_query($con, $update_qty); 
-							
-							$_SESSION['qty']=$qty;
-							
-							$total = $total*$qty;
-						}
-						
-						
-						?>
-						
-						
+						</td>		
 						<td><?php echo "$" . $single_price; ?></td>
 					</tr>
 					

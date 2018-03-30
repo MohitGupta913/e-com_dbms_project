@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2018 at 08:42 AM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 5.6.34
+-- Generation Time: Mar 30, 2018 at 05:46 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 5.6.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -117,15 +117,17 @@ CREATE TABLE `customers` (
   `customer_city` text NOT NULL,
   `customer_contact` varchar(255) NOT NULL,
   `customer_address` text NOT NULL,
-  `customer_image` text NOT NULL
+  `customer_image` text NOT NULL,
+  `customer_secret` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`) VALUES
-(6, '119.157.220.50', 'Abdul Wali', 'awpareshan@gmail.com', 'walikhan', 'Pakistan', 'Karachi', '3243423', 'dfads', 'abdul-wali-ustaad1.jpg');
+INSERT INTO `customers` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_secret`) VALUES
+(6, '119.157.220.50', 'Abdul Wali', 'awpareshan@gmail.com', 'walikhan', 'Pakistan', 'Karachi', '3243423', 'dfads', 'abdul-wali-ustaad1.jpg', ''),
+(7, '::1', 'Mohit Gupta', 'mohit@gmail.com', 'mohit', 'India', 'Delhi', '1234567890', 'Shanti Mohalla', 'WhatsApp Image 2018-01-05 at 10.11.32 AM.jpeg', '');
 
 --
 -- Triggers `customers`
@@ -161,7 +163,8 @@ CREATE TABLE `cust_backup` (
 --
 
 INSERT INTO `cust_backup` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`) VALUES
-(7, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'rahul', 'India', 'Delhi', '09821889422', 'east vinod nagar', 'favicon.ico');
+(7, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'rahul', 'India', 'Delhi', '09821889422', 'east vinod nagar', 'favicon.ico'),
+(8, '::1', 'akash', 'akash@gmail.com', 'gupta', 'Select a Country', 'delhi', '7418529630', 'Shanti Mohalla', '39049797-punisher-wallpapers.jpg');
 
 -- --------------------------------------------------------
 
@@ -196,7 +199,9 @@ INSERT INTO `orders` (`order_id`, `p_id`, `c_id`, `qty`, `amount`, `currency`, `
 (12, 8, 6, 4, 0, '', 496641685, 'in Progress', '2014-08-08'),
 (13, 8, 6, 1, 450, 'USD', 370935809, 'in Progress', '2018-03-29'),
 (14, 8, 6, 1, 1550, 'USD', 1888421494, 'in Progress', '2018-03-29'),
-(15, 11, 6, 1, 1400, 'USD', 1239155451, 'in Progress', '2018-03-29');
+(15, 11, 6, 1, 1400, 'USD', 1239155451, 'in Progress', '2018-03-29'),
+(16, 0, 6, 1, 0, 'USD', 1918677737, 'in Progress', '2018-03-29'),
+(17, 0, 7, 1, 0, 'USD', 1208155700, 'in Progress', '2018-03-30');
 
 -- --------------------------------------------------------
 
@@ -346,19 +351,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `cust_backup`
 --
 ALTER TABLE `cust_backup`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `order_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `payments`

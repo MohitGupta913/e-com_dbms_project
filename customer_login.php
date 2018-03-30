@@ -23,7 +23,7 @@ include("includes/db.php");
 			</tr>
 			
 			<tr align="center">
-				<td colspan="3"><a href="checkout.php?forgot_pass">Forgot Password?</a></td>
+				<td colspan="3"><a href="forgot_pass.php?enter_email">Forgot Password?</a></td>
 			</tr>
 			
 			<tr align="center">

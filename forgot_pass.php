@@ -114,6 +114,11 @@ include("functions/functions.php");
                         <td align="right"><b>Email:</b></td>
                         <td><input type="text" name="email" placeholder="enter email" required/></td>
                     </tr>
+
+					<tr>
+                        <td align="right"><b>Secret:</b></td>
+                        <td><input type="text" name="secret" placeholder="enter your secret" required/></td>
+                    </tr>
                     
                     <tr align="center">
                         <td colspan="3"><input type="submit" name="submit_email" value="Submit Email Id" /></td>
@@ -187,9 +192,10 @@ include("functions/functions.php");
 <?php 
 if(isset($_POST['submit_email'])){
 	
-    $c_email = $_POST['email'];
+	$c_email = $_POST['email'];
+	$c_secret = $_POST['secret'];
     
-    $sel_c = "select * from customers where customer_email='$c_email'";
+    $sel_c = "select * from customers where customer_email='$c_email' and customer_secret='$c_secret'";
     
     $run_c = mysqli_query($con, $sel_c);
     
@@ -197,7 +203,7 @@ if(isset($_POST['submit_email'])){
     
     if($check_customer==0){
     
-    echo "<script>alert('Email not found, plz try again!')</script>";
+    echo "<script>alert('Email or secret is not correct, plz try again!')</script>";
     echo "<script>window.open('forgot_pass.php?enter_email','_self')</script>";
     exit();
     }

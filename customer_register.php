@@ -151,6 +151,11 @@ include("includes/db.php");
 							<td align="right">Customer Address</td>
 							<td><input type="text" name="c_address" required/></td>
 						</tr>
+
+						<tr>
+							<td align="right">Customer Secret</td>
+							<td><input type="text" name="c_secret" required/></td>
+						</tr>
 						
 						
 					<tr align="center">
@@ -196,11 +201,12 @@ include("includes/db.php");
 		$c_city = $_POST['c_city'];
 		$c_contact = $_POST['c_contact'];
 		$c_address = $_POST['c_address'];
+		$c_secret = $_POST['c_secret'];
 	
 		
 		move_uploaded_file($c_image_tmp,"customer/customer_images/$c_image");
 		
-		 $insert_c = "insert into customers (customer_ip,customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image) values ('$ip','$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image')";
+		 $insert_c = "insert into customers (customer_ip,customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image, customer_secret) values ('$ip','$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image','$c_secret')";
 	
 		$run_c = mysqli_query($con, $insert_c); 
 		

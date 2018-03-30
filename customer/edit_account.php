@@ -26,7 +26,7 @@
 				$contact = $row_customer['customer_contact'];
 				$address= $row_customer['customer_address'];
 				$image = $row_customer['customer_image'];
-				
+				$secret = $row_customer['customer_secret'];
 				
 		?>
 			
@@ -93,6 +93,11 @@
 							<td align="right">Customer Address</td>
 							<td><input type="text" name="c_address" value="<?php echo $address;?>"/></td>
 						</tr>
+
+						<tr>
+							<td align="right">Customer Secret</td>
+							<td><input type="text" name="c_secret" value="<?php echo $secret;?>"/></td>
+						</tr>
 						
 						
 					<tr align="center">
@@ -124,11 +129,12 @@
 		$c_city = $_POST['c_city'];
 		$c_contact = $_POST['c_contact'];
 		$c_address = $_POST['c_address'];
+		$c_secret = $_POST['c_secret'];
 	
 		
 		move_uploaded_file($c_image_tmp,"customer_images/$c_image");
 		
-		 $update_c = "update customers set customer_name='$c_name', customer_email='$c_email', customer_pass='$c_pass',customer_city='$c_city', customer_contact='$c_contact',customer_address='$c_address',customer_image='$c_image' where customer_id='$customer_id'";
+		 $update_c = "update customers set customer_name='$c_name', customer_email='$c_email', customer_pass='$c_pass',customer_city='$c_city', customer_contact='$c_contact',customer_address='$c_address',customer_image='$c_image', customer_secret='$c_secret' where customer_id='$customer_id'";
 	
 		$run_update = mysqli_query($con, $update_c); 
 		

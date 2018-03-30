@@ -3,7 +3,12 @@
 session_start();
 include("functions/functions.php");
 
+if(!isset($_SESSION['customer_email'])){
+	echo "<script>window.open('../checkout.php','_self')</script>";
+}
+else{
 ?>
+
 <html>
 	<head>
 		<title>My Online Shop</title>
@@ -185,3 +190,5 @@ include("functions/functions.php");
 
 </body>
 </html>
+
+<?php } ?>

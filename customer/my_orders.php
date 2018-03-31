@@ -17,6 +17,7 @@
 		<th>S.N</th>
 		<th>Product (S)</th>
 		<th>Quantity</th>
+		<th>Total Amount</th>
 		<th>Invoice No</th>
 		<th>Order Date</th>
 		<th>Status</th>
@@ -43,6 +44,7 @@
 		
 		$order_id = $row_order['order_id'];
 		$qty = $row_order['qty'];
+		$amt = $row_order['amount'];
 		$pro_id = $row_order['p_id'];
 		$invoice_no = $row_order['invoice_no'];
 		$order_date = $row_order['order_date'];
@@ -65,6 +67,7 @@
 		<img src="../admin_area/product_images/<?php echo $pro_image;?>" width="50" height="50" />
 		</td>
 		<td><?php echo $qty;?></td>
+		<td><?php echo $amt;?></td>
 		<td><?php echo $invoice_no;?></td>
 		<td><?php echo $order_date;?></td>
 		<td><?php echo $status;?></td>

@@ -157,7 +157,7 @@ include("functions/functions.php");
                     </tr>
                     
                     <tr align="center">
-                        <td colspan="3"><input type="submit" name="submit_pass" value="Submit Password" /></td>
+                        <td colspan="3"><input type="submit" name="submit_pass" value="Submit Password" class="btn btn-success"/></td>
                     </tr>
                     
                 

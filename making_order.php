@@ -63,6 +63,12 @@
 				// inserting the order into table
 				$insert_order = "insert into orders (p_id, c_id, qty,amount, currency, invoice_no, order_date,status) values ('$pro_id','$c_id','$qty','$total','USD', '$invoice',NOW(),'in Progress')";
 				$run_order = mysqli_query($con, $insert_order); 
+
+				if(!$run_order){ 
+					echo "<script>alert('There is some error in placing order!')</script>";
+					echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
+					exit();
+				}
 				
 				//removing the products from cart
 				$empty_cart = "delete from cart where ip_add='$ip'";
@@ -70,9 +76,9 @@
 				echo "<script>alert('Product placed order successfully!')</script>";
 				echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
 			
-			$values = array_sum($product_price);
+			//$values = array_sum($product_price);
 			
-			$total +=$values;
+			//$total +=$values;
 			
 			}
 		

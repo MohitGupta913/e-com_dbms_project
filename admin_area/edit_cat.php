@@ -54,6 +54,11 @@ if(isset($_GET['edit_cat'])){
 	echo "<script>alert(' Category has been updated!')</script>";
 	echo "<script>window.open('index.php?view_cats','_self')</script>";
 	}
+	else{
+	
+		echo "<script>alert('There is some error in deleting this category!')</script>";
+		echo "<script>window.open('index.php?view_cats','_self')</script>";
+		}
 	}
 
 ?>

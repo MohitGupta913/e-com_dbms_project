@@ -232,7 +232,12 @@ include("includes/db.php");
 		
 		 $insert_c = "insert into customers (customer_ip,customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image, customer_secret) values ('$ip','$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image','$c_secret')";
 	
-		$run_c = mysqli_query($con, $insert_c); 
+		$run_c = mysqli_query($con, $insert_c);
+		if(!$run_c){
+			echo "<script>alert('There is some error in making new account!')</script>";
+			echo "<script>window.open('checkout.php','_self')</script>";
+			exit();
+		} 
 		
 		$sel_cart = "select * from cart where ip_add='$ip'";
 		

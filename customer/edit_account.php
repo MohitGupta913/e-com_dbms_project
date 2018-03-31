@@ -171,6 +171,12 @@
 		echo "<script>window.open('my_account.php','_self')</script>";
 		
 		}
+		else{
+		
+			echo "<script>alert('There is some error in updating your account!')</script>";
+			echo "<script>window.open('my_account.php','_self')</script>";
+			
+			}
 	}
 
 

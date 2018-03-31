@@ -54,6 +54,11 @@ if(isset($_GET['edit_brand'])){
 	echo "<script>alert('Brand has been updated!')</script>";
 	echo "<script>window.open('index.php?view_brands','_self')</script>";
 	}
+	else{
+	
+		echo "<script>alert('There is some error in deleting this brand!')</script>";
+		echo "<script>window.open('index.php?view_brands','_self')</script>";
+		}
 	}
 
 ?>

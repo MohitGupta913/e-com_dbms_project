@@ -208,6 +208,10 @@ if(isset($_POST['ch_qty'])){
 	echo "<script>window.open('cart.php','_self')</script>";
 	
 	}
+	else{
+		echo "<script>alert('There is some error in increasing quantity!')</script>";
+		echo "<script>window.open('cart.php','_self')</script>";
+	}
 	
 	}
 
@@ -227,6 +231,10 @@ if(isset($_POST['cha_qty'])){
 	
 	echo "<script>window.open('cart.php','_self')</script>";
 	
+	}
+	else{
+		echo "<script>alert('There is some error in descreaing quantity!')</script>";
+		echo "<script>window.open('cart.php','_self')</script>";
 	}
 	}
 
@@ -250,6 +258,10 @@ if(isset($_POST['cha_qty'])){
 			
 			echo "<script>window.open('cart.php','_self')</script>";
 			
+			}
+			else{
+				echo "<script>alert('There is some error in deleting !')</script>";
+				echo "<script>window.open('cart.php','_self')</script>";
 			}
 			
 			}

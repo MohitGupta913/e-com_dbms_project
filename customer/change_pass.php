@@ -68,6 +68,11 @@ include("includes/db.php");
 		$update_pass = "update customers set customer_pass='$new_pass' where customer_email='$user'";
 		
 		$run_update = mysqli_query($con, $update_pass); 
+		if(!$run_update){
+			echo "<script>alert('There is some error in changing password!')</script>";
+			echo "<script>window.open('my_account.php','_self')</script>";
+			exit();
+		}
 		
 		echo "<script>alert('Your password was updated succesfully!')</script>";
 		echo "<script>window.open('my_account.php','_self')</script>";

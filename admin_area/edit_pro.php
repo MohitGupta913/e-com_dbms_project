@@ -197,6 +197,13 @@ if(isset($_GET['edit_pro'])){
 		 echo "<script>window.open('index.php?view_products','_self')</script>";
 		 
 		 }
+		 else{
+		 
+			echo "<script>alert('There is some error in updating product!')</script>";
+			
+			echo "<script>window.open('index.php?view_products','_self')</script>";
+			
+			}
 	}
 
 

@@ -207,7 +207,7 @@ include("functions/functions.php");
 <a href="#" class="fa fa-instagram"></a>
 		
 		
-		<h2 style="text-align:center; padding-top:30px;">&copy; 2014 by www.OnlineTuting.com</h2>
+		<h2 style="text-align:center; padding-top:30px;">E-Commerce DBMS Project<br>Made By Mohit Gupta, Rahul Singh Rawat and Saif Haque<br>&copy; All Rights Reserved.</h2>
 		
 		</div>
 	

@@ -17,12 +17,20 @@
 		<th>S.N</th>
 		<th>Product (S)</th>
 		<th>Quantity</th>
+		<th>Total Amount</th>
 		<th>Invoice No</th>
 		<th>Order Date</th>
 		<th>Status</th>
 	</tr>
 	<?php 
 	include("includes/db.php");
+
+	$email = $_SESSION['customer_email'];
+	$find_c = "select * from customers where customer_email='$email'";
+	$run_c = mysqli_query($con, $find_c);
+	$c =mysqli_fetch_array($run_c);
+	$cust_id = $c['customer_id'];
+
 	
 	$get_order = "select * from orders";
 	
@@ -31,9 +39,12 @@
 	$i = 0;
 	
 	while ($row_order=mysqli_fetch_array($run_order)){
+		$c_id = $row_order['c_id'];
+		if($c_id == $cust_id){
 		
 		$order_id = $row_order['order_id'];
 		$qty = $row_order['qty'];
+		$amt = $row_order['amount'];
 		$pro_id = $row_order['p_id'];
 		$invoice_no = $row_order['invoice_no'];
 		$order_date = $row_order['order_date'];
@@ -56,12 +67,13 @@
 		<img src="../admin_area/product_images/<?php echo $pro_image;?>" width="50" height="50" />
 		</td>
 		<td><?php echo $qty;?></td>
+		<td><?php echo $amt;?></td>
 		<td><?php echo $invoice_no;?></td>
 		<td><?php echo $order_date;?></td>
 		<td><?php echo $status;?></td>
 	
 	</tr>
-	<?php } ?>
+	<?php }} ?>
 </table>
 
 	<?php } ?>

@@ -39,6 +39,11 @@ include("includes/db.php");
 	$delete_customer = "delete from customers where customer_email='$user'";
 	
 	$run_customer = mysqli_query($con,$delete_customer); 
+<<<<<<< HEAD
+=======
+	session_destroy(); 
+	
+>>>>>>> 7319c92c5395e28076a926e1b4e027ab5a98121d
 	echo "<script>alert('We are really sorry, your account has been deleted!')</script>";
 	echo "<script>window.open('../index.php','_self')</script>";
 	}

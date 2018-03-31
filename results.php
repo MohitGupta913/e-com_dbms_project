@@ -95,7 +95,12 @@ include("functions/functions.php");
 	
 	$get_pro = "select * from products where product_keywords like '%$search_query%'";
 
-	$run_pro = mysqli_query($con, $get_pro); 
+	$run_pro = mysqli_query($con, $get_pro);
+
+	$check_pro = mysqli_num_rows($run_pro);
+	if($check_pro == 0){
+		echo "<h3>No match found</h3>";
+	}
 	
 	while($row_pro=mysqli_fetch_array($run_pro)){
 	

@@ -17,20 +17,8 @@ else {
 include("includes/db.php");
 
 ?>
-<html>
-	<head>
-		<title>Inserting Product</title> 
-		
-<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-<script>
-        tinymce.init({selector:'textarea'});
-</script>
-	</head>
-	
-<body bgcolor="skyblue">
 
-
-	<form action="insert_product.php" method="post" enctype="multipart/form-data"> 
+	<form action="" method="post" enctype="multipart/form-data"> 
 		
 		<table align="center" width="795" border="2" bgcolor="#187eae">
 			
@@ -127,8 +115,7 @@ include("includes/db.php");
 	</form>
 
 
-</body> 
-</html>
+
 <?php 
 
 	if(isset($_POST['insert_post'])){

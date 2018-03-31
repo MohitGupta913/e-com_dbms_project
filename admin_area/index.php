@@ -14,6 +14,10 @@ else {
 <html>
 	<head>
 		<title>This is Admin Panel</title> 
+		<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+		<script>
+				tinymce.init({selector:'textarea'});
+		</script>
 		
 	<link rel="stylesheet" href="styles/style.css" media="all" /> 
 	</head>

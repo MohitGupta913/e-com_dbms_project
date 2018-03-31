@@ -58,12 +58,7 @@
 			$pro_p = $pp_price['product_price'];
 			$total = $pro_p*$qty;
 
-			$invoice = mt_rand();
-				
-				//inserting the payment to table 
-				//$insert_payment = "insert into payments (amount,customer_id,product_id,trx_id,currency,payment_date) values ('$total','$c_id','$pro_id','$trx_id','$currency',NOW())";
-				
-				//$run_payment = mysqli_query($con, $insert_payment); 
+			$invoice = mt_rand(); 
 				
 				// inserting the order into table
 				$insert_order = "insert into orders (p_id, c_id, qty,amount, currency, invoice_no, order_date,status) values ('$pro_id','$c_id','$qty','$total','USD', '$invoice',NOW(),'in Progress')";
@@ -83,47 +78,6 @@
 		
 		
 		}
-		
-			// getting Quantity of the product 
-			// $get_qty = "select * from cart where p_id='$pro_id'";
-			
-			// $run_qty = mysqli_query($con, $get_qty); 
-			
-			// $row_qty = mysqli_fetch_array($run_qty); 
-			
-			// $qty = $row_qty['qty'];
-			
-			// if($qty==0){
-			
-			// $qty=1;
-			// }
-			// else {
-			
-			// $qty=$qty;
-			
-			// $total = $total*$qty;
-			
-			// }
-			
-			
-			
-
-			
-				
-				
-				
-		/*if($amount==$total){
-		
-		echo "<h2>Welcome:" . $_SESSION['customer_email']. "<br>" . "Your Payment was successful!</h2>";
-		echo "<a href='http://www.onlinetuting.com/myshop/customer/my_account.php'>Go to your Account</a>";
-		
-		}
-		else {
-		
-		echo "<h2>Welcome Guest, Payment was failed</h2><br>";
-		echo "<a href='http://www.onlinetuting.com/myshop'>Go to Back to shop</a>";
-		
-		}*/
 			
 				
 

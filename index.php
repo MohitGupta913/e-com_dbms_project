@@ -82,7 +82,7 @@ include("functions/functions.php");
 				
 				<ul class="list-unstyled components">
 					
-					<form action='' method='post'>
+					<form action='index.php' method='post'>
 					<table align='center'>
 						<tr>
 							<td><span style='color:white;'>Select Category</span></td>
@@ -147,7 +147,7 @@ include("functions/functions.php");
 		
 			<div id="content_area">
 			
-			<?php cart(); ?>
+			
 			
 			<div id="shopping_cart"> 
 					
@@ -222,5 +222,7 @@ include("functions/functions.php");
 
 </body>
 </html>
+
+<?php cart(); ?>
 
 

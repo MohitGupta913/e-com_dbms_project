@@ -133,6 +133,7 @@ if(isset($_GET['add_cart'])){
 function getCats(){
 	
 	global $con; 
+
 	
 	$get_cats = "select * from categories";
 	
@@ -258,7 +259,13 @@ function getCatPro(){
 					
 					<a href='details.php?pro_id=$pro_id' style='float:left; color:black'>Details</a>
 					
+<<<<<<< HEAD
 					<a href='index.php?pro_id=$pro_id'><button style='float:right' type='button' class='btn btn-success'>Add to Cart</button></a>
+||||||| merged common ancestors
+					<a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to Cart</button></a>
+=======
+					<a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to Cart</button></a>
+>>>>>>> bf75106329e801193d4f43d90a20e2e33fdd84b8
 				
 				</div>
 		
@@ -332,7 +339,7 @@ function filter(){
 						
 						<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
 						
-						<a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to Cart</button></a>
+						<a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to Cart</button></a>
 					
 					</div>
 			
@@ -384,7 +391,13 @@ function getBrandPro(){
 					
 					<a href='details.php?pro_id=$pro_id' style='float:left; color:black'>Details</a>
 					
+<<<<<<< HEAD
 					<a href='index.php?pro_id=$pro_id'><button style='float:right' type='button' class='btn btn-success'>Add to Cart</button></a>
+||||||| merged common ancestors
+					<a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to Cart</button></a>
+=======
+					<a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to Cart</button></a>
+>>>>>>> bf75106329e801193d4f43d90a20e2e33fdd84b8
 				
 				</div>
 		

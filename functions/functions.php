@@ -202,9 +202,9 @@ function getPro(){
 					
 					<p><b> Price: $ $pro_price </b></p>
 					
-					<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
+					<a href='details.php?pro_id=$pro_id' style='float:left; color:black'>Details</a>
 					
-					<a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to Cart</button></a>
+					<a href='index.php?add_cart=$pro_id'><button style='float:right' type='button' class='btn btn-success'>Add to Cart</button></a>
 				
 				</div>
 		
@@ -256,9 +256,9 @@ function getCatPro(){
 					
 					<p><b> $ $pro_price </b></p>
 					
-					<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
+					<a href='details.php?pro_id=$pro_id' style='float:left; color:black'>Details</a>
 					
-					<a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to Cart</button></a>
+					<a href='index.php?pro_id=$pro_id'><button style='float:right' type='button' class='btn btn-success'>Add to Cart</button></a>
 				
 				</div>
 		
@@ -382,9 +382,9 @@ function getBrandPro(){
 					
 					<p><b> $ $pro_price </b></p>
 					
-					<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
+					<a href='details.php?pro_id=$pro_id' style='float:left; color:black'>Details</a>
 					
-					<a href='index.php?pro_id=$pro_id'><button style='float:right'>Add to Cart</button></a>
+					<a href='index.php?pro_id=$pro_id'><button style='float:right' type='button' class='btn btn-success'>Add to Cart</button></a>
 				
 				</div>
 		

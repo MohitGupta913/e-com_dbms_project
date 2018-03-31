@@ -114,7 +114,34 @@
 		
 	
 <?php 
-	if(isset($_POST['update'])){
+
+	$e_check= 1;
+
+	if(isset($_POST['c_email'])){
+		$email_id = $_POST['c_email'];
+		$num_rows=0;
+		if($email_id!=$_SESSION['customer_email']){
+		$get_email = "select * from customers where customer_email='$email_id'";
+		$run_email = mysqli_query($con, $get_email);
+		$num_rows = mysqli_num_rows($run_email);
+		if($num_rows>0){
+			echo "<script>alert('Email Id alredy registered!')</script>";
+			}
+		
+		if(filter_var($email_id, FILTER_VALIDATE_EMAIL)){
+				$e_check =1;//Email is good
+				}
+		else {
+			$e_check =0;
+			echo "<script>alert('Email Id not valid!')</script>";
+		}
+		}
+	}
+
+
+
+
+	if(isset($_POST['update']) &&  $num_rows==0  && $e_check){
 	
 		
 		$ip = getIp();
@@ -144,6 +171,12 @@
 		echo "<script>window.open('my_account.php','_self')</script>";
 		
 		}
+		else{
+		
+			echo "<script>alert('There is some error in updating your account!')</script>";
+			echo "<script>window.open('my_account.php','_self')</script>";
+			
+			}
 	}
 
 

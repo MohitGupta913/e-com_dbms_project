@@ -157,6 +157,12 @@ include("includes/db.php");
 		 echo "<script>window.open('index.php?insert_product','_self')</script>";
 		 
 		 }
+		 else{
+		 
+			echo "<script>alert('There is some error in inserting new Product!')</script>";
+			echo "<script>window.open('index.php?insert_product','_self')</script>";
+			
+			}
 	}
 
 

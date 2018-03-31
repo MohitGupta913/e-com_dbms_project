@@ -33,6 +33,11 @@ include("includes/db.php");
 	echo "<script>alert('New Category has been inserted!')</script>";
 	echo "<script>window.open('index.php?view_cats','_self')</script>";
 	}
+	else{
+	
+		echo "<script>alert('There is some error in inserting new category!')</script>";
+		echo "<script>window.open('index.php?view_cats','_self')</script>";
+		}
 	}
 
 ?>

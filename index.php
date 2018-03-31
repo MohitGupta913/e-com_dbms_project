@@ -32,15 +32,17 @@ include("functions/functions.php");
 		<!--Header ends here-->
 		
 		<!--Navigation Bar starts-->
+
 		<nav class="navbar navbar-inverse">
 		  <div class="container-fluid">
 		    <ul class="nav navbar-nav">
 			  <li><a href="index.php">Home</a></li>
 			  <li><a href="all_products.php">All Products</a></li>
 			  <li><a href="customer/my_account.php">My Account</a></li>
-	          <li><a href="checkout.php">Sign Up</a></li>
+	          <li><a href="customer_register.php">Sign Up</a></li>
 			  <li><a href="cart.php">Shopping Cart</a></li>
 			  <li><a href="#">Contact Us</a></li>
+
 			</ul>
 			<form class="navbar-form navbar-left" action="results.php" enctype="multipart/form-data" method="get">
               <div class="input-group">

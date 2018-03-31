@@ -32,17 +32,24 @@ include("includes/db.php");
 	$file_link = "customer_images/{$file}";
 
 
-	if( file_exists($file_link)){
-		unlink($file_link);
-	}
+	
 	
 	$delete_customer = "delete from customers where customer_email='$user'";
 	
-	$run_customer = mysqli_query($con,$delete_customer); 
+	$run_customer = mysqli_query($con,$delete_customer);
+	if($run_customer){
+		if( file_exists($file_link)){
+			unlink($file_link);
+		}
 	session_destroy(); 
 	
 	echo "<script>alert('We are really sorry, your account has been deleted!')</script>";
 	echo "<script>window.open('../index.php','_self')</script>";
+	}
+	else{
+		echo "<script>alert('There is some error in deleting your account!')</script>";
+		echo "<script>window.open('my_account.php','_self')</script>";
+	}
 	}
 	if(isset($_POST['no'])){
 	

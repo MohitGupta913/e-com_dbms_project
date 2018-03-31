@@ -14,6 +14,11 @@
 	echo "<script>alert('A Brand has been deleted!')</script>";
 	echo "<script>window.open('index.php?view_brands','_self')</script>";
 	}
+	else{
+	
+		echo "<script>alert('There is some error in deleting brand!')</script>";
+		echo "<script>window.open('index.php?view_brands','_self')</script>";
+		}
 	
 	}
 

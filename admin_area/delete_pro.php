@@ -12,19 +12,25 @@
 	$file_link = "product_images/{$file}";
 
 
-	if( file_exists($file_link)){
-		unlink($file_link);
-	}
+	
 	
 	$delete_pro = "delete from products where product_id='$delete_id'"; 
 	
 	$run_delete = mysqli_query($con, $delete_pro); 
 	
 	if($run_delete){
+		if( file_exists($file_link)){
+			unlink($file_link);
+		}
 	
 	echo "<script>alert('A product has been deleted!')</script>";
 	echo "<script>window.open('index.php?view_products','_self')</script>";
 	}
+	else{
+	
+		echo "<script>alert('There is some error in deleting this product!')</script>";
+		echo "<script>window.open('index.php?view_products','_self')</script>";
+		}
 	
 	}
 

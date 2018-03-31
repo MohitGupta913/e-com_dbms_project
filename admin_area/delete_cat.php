@@ -14,6 +14,11 @@
 	echo "<script>alert('A Category has been deleted!')</script>";
 	echo "<script>window.open('index.php?view_cats','_self')</script>";
 	}
+	else{
+	
+		echo "<script>alert('There is some error in deleting category!')</script>";
+		echo "<script>window.open('index.php?view_cats','_self')</script>";
+		}
 	
 	}
 

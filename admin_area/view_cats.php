@@ -9,7 +9,7 @@ else {
 
 ?>
 
-<table width="795" align="center" bgcolor="pink"> 
+<table width="795" align="center" class="bg-blueviolet"> 
 
 	
 	<tr align="center">
@@ -38,11 +38,11 @@ else {
 		$i++;
 	
 	?>
-	<tr align="center">
+	<tr align="left">
 		<td><?php echo $cat_id;?></td>
 		<td><?php echo $cat_title;?></td>
-		<td><a href="index.php?edit_cat=<?php echo $cat_id; ?>">Edit</a></td>
-		<td><a href="delete_cat.php?delete_cat=<?php echo $cat_id;?>">Delete</a></td>
+		<td><a href="index.php?edit_cat=<?php echo $cat_id; ?>" style="color:red">Edit</a></td>
+		<td><a href="delete_cat.php?delete_cat=<?php echo $cat_id;?>" style="color:red">Delete</a></td>
 	
 	</tr>
 	<?php } ?>

@@ -12,21 +12,21 @@
 	<table align="center" width="600">
 	<tr>
 	<td align="right"><b>Enter Current Password:</b></td>
-	<td><input type="password" name="current_pass" required></td>
+	<td><input type="password" name="current_pass" required class="form-control"></td>
 	</tr>
 	
 	<tr>
 	<td align="right"><b>Enter New Password:</b></td>
-	<td><input type="password" name="new_pass" required></td>
+	<td><input type="password" name="new_pass" required class="form-control"></td>
 	</tr>
 	
 	<tr>
 	<td align="right"><b>Enter New Password Again:</b></td>
-	<td><input type="password" name="new_pass_again" required></td>
+	<td><input type="password" name="new_pass_again" required class="form-control"></td>
 	</tr>
 	
 	<tr align="center">
-	<td colspan="3"><input type="submit" name="change_pass" value="Change Password"/></td>
+	<td colspan="3"><input type="submit" name="change_pass" value="Change Password" class="btn btn-warning"/></td>
 	</tr>
 	
 	</table>

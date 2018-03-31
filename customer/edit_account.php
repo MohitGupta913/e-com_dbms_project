@@ -40,17 +40,17 @@
 						
 						<tr>
 							<td align="right">Customer Name:</td>
-							<td><input type="text" name="c_name" value="<?php echo $name;?>" required/></td>
+							<td><input type="text" name="c_name" value="<?php echo $name;?>" required class="form-control"/></td>
 						</tr>
 						
 						<tr>
 							<td align="right">Customer Email:</td>
-							<td><input type="text" name="c_email" value="<?php echo $email;?>" required/></td>
+							<td><input type="text" name="c_email" value="<?php echo $email;?>" required class="form-control"/></td>
 						</tr>
 						
 						<tr>
 							<td align="right">Customer Password:</td>
-							<td><input type="password" name="c_pass" value="<?php echo $pass;?>" required/></td>
+							<td><input type="password" name="c_pass" value="<?php echo $pass;?>" required class="form-control"/></td>
 						</tr>
 						
 						<tr>
@@ -63,7 +63,7 @@
 						<tr>
 							<td align="right">Customer Country:</td>
 							<td>
-							<select name="c_country" disabled>
+							<select name="c_country" disabled class="form-control">
 								<option><?php echo $country; ?></option>
 								<option>Afghanistan</option>
 								<option>India</option>
@@ -81,27 +81,27 @@
 						
 						<tr>
 							<td align="right">Customer City:</td>
-							<td><input type="text" name="c_city" value="<?php echo $city;?>"/></td>
+							<td><input type="text" name="c_city" value="<?php echo $city;?>" class="form-control"/></td>
 						</tr>
 						
 						<tr>
 							<td align="right">Customer Contact:</td>
-							<td><input type="text" name="c_contact" value="<?php echo $contact;?>"/></td>
+							<td><input type="text" name="c_contact" value="<?php echo $contact;?>" class="form-control"/></td>
 						</tr>
 						
 						<tr>
 							<td align="right">Customer Address</td>
-							<td><input type="text" name="c_address" value="<?php echo $address;?>"/></td>
+							<td><input type="text" name="c_address" value="<?php echo $address;?>" class="form-control"/></td>
 						</tr>
 
 						<tr>
 							<td align="right">Customer Secret</td>
-							<td><input type="text" name="c_secret" value="<?php echo $secret;?>"/></td>
+							<td><input type="text" name="c_secret" value="<?php echo $secret;?>" class="form-control"/></td>
 						</tr>
 						
 						
 					<tr align="center">
-						<td colspan="6"><input type="submit" name="update" value="Update Account" /></td>
+						<td colspan="6"><input type="submit" name="update" value="Update Account" class="btn btn-warning"/></td>
 					</tr>
 					
 					

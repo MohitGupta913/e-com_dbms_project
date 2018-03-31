@@ -27,50 +27,60 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-body {background:skyblue;}
+
 
 .main_wrapper{
-width:1000px;
-height:auto;
-margin:auto;
-}
-
-
-#header {
 	width:1000px;
-	height:120px;
-	background-image:url(../images/bg-header.jpg);
-	border-bottom:5px groove orange;
-}
-
-#left{
-width:795px;
-height:800px;
-background-image:url(../images/bg-body.gif); 
-float:left;
-}
-#right {
-width:200px;
-height:800px;
-float:right;
-border-left:5px groove orange;
-background:#187eae;
-}
-
-#right a {
-text-decoration:none;
-color:white;
-text-align:left;
-font-size:18px;
-font-family:Palatino; 
-padding:6px;
-margin:6px;
-display:block;
-}
-#right a:hover {text-decoration:underline; font-weight:bolder; color:orange;}
-
-
-
-
+	height:auto;
+	margin:auto;
+	}
+	
+	
+	#header {
+		width:1000px;
+		height:120px;
+		background-image:url(../images/download.jpg);
+		border-bottom:5px groove orange;
+	}
+	
+	#left{
+	width:795px;
+	height:800px;
+	background-image:url(../images/admin-header.jpg); 
+	float:left;
+	}
+	
+	table.bg-blueviolet {
+	  background: blueviolet;
+	}
+	#sidebar {
+		  background: black;
+		color: white;
+		transition: all 0.3s;
+	width:200px;
+	
+	float:right;
+	}
+	
+	#sidebar .sidebar-header {
+		 padding: 20px;
+		background: #6d7fcc;
+	
+	color:black;
+	font-size:22px;
+	font-family:arial; 
+	
+	text-align:center;
+	}
+	
+	#sidebar  a {
+		padding: 10px;
+		font-size: 1.1em;
+		display: block;
+	}
+	#sidebar  a:hover {
+		color: #7386D5;
+		background: #fff;
+	}
 
 

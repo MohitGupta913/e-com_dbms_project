@@ -68,7 +68,7 @@ if(isset($_GET['edit_pro'])){
 
 	<form action="" method="post" enctype="multipart/form-data"> 
 		
-		<table align="center" width="795" border="2" bgcolor="#187eae">
+		<table align="center" width="795" border="2" class="bg-blueviolet">
 			
 			<tr align="center">
 				<td colspan="7"><h2>Edit & Update Product</h2></td>
@@ -76,13 +76,13 @@ if(isset($_GET['edit_pro'])){
 			
 			<tr>
 				<td align="right"><b>Product Title:</b></td>
-				<td><input type="text" name="product_title" size="60" value="<?php echo $pro_title;?>"/></td>
+				<td><input type="text" name="product_title" size="60" value="<?php echo $pro_title;?>" class="form-control"/></td>
 			</tr>
 			
 			<tr>
 				<td align="right"><b>Product Category:</b></td>
 				<td>
-				<select name="product_cat" >
+				<select name="product_cat" class="form-control">
 					<option><?php echo $category_title; ?></option>
 					<?php 
 		$get_cats = "select * from categories";
@@ -109,7 +109,7 @@ if(isset($_GET['edit_pro'])){
 			<tr>
 				<td align="right"><b>Product Brand:</b></td>
 				<td>
-				<select name="product_brand" >
+				<select name="product_brand" class="form-control">
 					<option><?php echo $brand_title; ?></option>
 					<?php 
 		$get_brands = "select * from brands";
@@ -140,7 +140,7 @@ if(isset($_GET['edit_pro'])){
 			
 			<tr>
 				<td align="right"><b>Product Price:</b></td>
-				<td><input type="text" name="product_price" value="<?php echo $pro_price;?>"/></td>
+				<td><input type="text" name="product_price" value="<?php echo $pro_price;?>" class="form-control"/></td>
 			</tr>
 			
 			<tr>
@@ -150,11 +150,11 @@ if(isset($_GET['edit_pro'])){
 			
 			<tr>
 				<td align="right"><b>Product Keywords:</b></td>
-				<td><input type="text" name="product_keywords" size="50" value="<?php echo $pro_keywords;?>"/></td>
+				<td><input type="text" name="product_keywords" size="50" value="<?php echo $pro_keywords;?>" class="form-control"/></td>
 			</tr>
 			
 			<tr align="center">
-				<td colspan="7"><input type="submit" name="update_product" value="Update Product"/></td>
+				<td colspan="7"><input type="submit" name="update_product" value="Update Product" class="btn btn-success"/></td>
 			</tr>
 		
 		</table>

@@ -116,6 +116,10 @@ margin-bottom:10px;
 	
 	#shopping_cart {width:800px; height:100px; background:black; color:white;}
 
+	.bg-cornflowerblue{
+		background:cornflowerblue;
+	}
+
 
 #footer {
 width:1000px;

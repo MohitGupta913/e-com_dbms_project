@@ -10,7 +10,7 @@ else {
 ?>
 
 
-<table width="795" align="center" bgcolor="pink"> 
+<table width="795" align="center" class="bg-blueviolet"> 
 
 	
 	<tr align="center">
@@ -66,7 +66,7 @@ else {
 		$c_name = $row_c['customer_name'];
 	
 	?>
-	<tr align="center">
+	<tr align="left">
 		<td><?php echo $i;?></td>
 		<td><?php echo $c_name;?></td>
 		<td>
@@ -81,7 +81,7 @@ else {
 		if($status == 'Shipped')
 			echo "<td>$status</td>";
 		else
-			echo "<td><a href='index.php?confirm_order= $order_id'> Complete Order</a></td>";
+			echo "<td><a href='index.php?confirm_order= $order_id' style='color:red'> Complete Order</a></td>";
 		?>
 		
 	

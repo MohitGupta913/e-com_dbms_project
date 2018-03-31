@@ -32,7 +32,7 @@ include("includes/db.php");
 
 	<form action="insert_product.php" method="post" enctype="multipart/form-data"> 
 		
-		<table align="center" width="795" border="2" bgcolor="#187eae">
+		<table align="center" width="795" border="2" class="bg-blueviolet">
 			
 			<tr align="center">
 				<td colspan="7"><h2>Insert New Post Here</h2></td>
@@ -40,13 +40,13 @@ include("includes/db.php");
 			
 			<tr>
 				<td align="right"><b>Product Title:</b></td>
-				<td><input type="text" name="product_title" size="60" required/></td>
+				<td><input type="text" name="product_title" size="60" required class="form-control"/></td>
 			</tr>
 			
 			<tr>
 				<td align="right"><b>Product Category:</b></td>
 				<td>
-				<select name="product_cat" >
+				<select name="product_cat" class="form-control">
 					<option>Select a Category</option>
 					<?php 
 		$get_cats = "select * from categories";
@@ -73,7 +73,7 @@ include("includes/db.php");
 			<tr>
 				<td align="right"><b>Product Brand:</b></td>
 				<td>
-				<select name="product_brand" >
+				<select name="product_brand" class="form-control">
 					<option>Select a Brand</option>
 					<?php 
 		$get_brands = "select * from brands";
@@ -104,7 +104,7 @@ include("includes/db.php");
 			
 			<tr>
 				<td align="right"><b>Product Price:</b></td>
-				<td><input type="text" name="product_price" required/></td>
+				<td><input type="text" name="product_price" required class="form-control" /></td>
 			</tr>
 			
 			<tr>
@@ -114,11 +114,11 @@ include("includes/db.php");
 			
 			<tr>
 				<td align="right"><b>Product Keywords:</b></td>
-				<td><input type="text" name="product_keywords" size="50" required/></td>
+				<td><input type="text" name="product_keywords" size="50" required class="form-control"/></td>
 			</tr>
 			
 			<tr align="center">
-				<td colspan="7"><input type="submit" name="insert_post" value="Insert Product Now"/></td>
+				<td colspan="7"><input type="submit" name="insert_post" value="Insert Product Now" class="btn btn-success"/></td>
 			</tr>
 		
 		</table>

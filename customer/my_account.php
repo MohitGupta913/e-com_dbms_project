@@ -14,10 +14,16 @@ else{
 		<title>My Online Shop</title>
 		
 		
-	<link rel="stylesheet" href="styles/style.css" media="all" /> 
+		<meta charset="utf-8"> 
+    <meta name="viewport" content="width=1000px, initial-scale=1">	 
+	<link rel="stylesheet" href="styles/style.css" media="all" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 	</head>
 	
-<body>
+<body  background="../images/ecommerce2.jpg">
 	
 	<!--Main Container starts here-->
 	<div class="main_wrapper">
@@ -25,43 +31,48 @@ else{
 		<!--Header starts here-->
 		<div class="header_wrapper">
 		
-			<a href="../index.php"><img id="logo" src="images/logo.gif" /> </a>
-			<img id="banner" src="images/ad_banner.gif" />
+		<a href="index.php"><img id="logo" src="../images/logo_new.jpg" /> </a>
+			<img id="banner" src="../images/jet-1.gif" />
 		</div>
 		<!--Header ends here-->
 		
 		<!--Navigation Bar starts-->
-		<div class="menubar">
-			
-			<ul id="menu">
-				<li><a href="../index.php">Home</a></li>
-				<li><a href="../all_products.php">All Products</a></li>
-				<li><a href="">My Account</a></li>
-				<li><a href="../checkout.php">Sign Up</a></li>
-				<li><a href="../cart.php">Shopping Cart</a></li>
-				<li><a href="#">Contact Us</a></li>
-			
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <ul class="nav navbar-nav">
+			  <li><a href="../index.php">Home</a></li>
+			  <li><a href="../all_products.php">All Products</a></li>
+			  <li><a href="">My Account</a></li>
+	          <li><a href="../checkout.php">Sign Up</a></li>
+			  <li><a href="../cart.php">Shopping Cart</a></li>
+			  <li><a href="#">Contact Us</a></li>
 			</ul>
-			
-			<div id="form">
-				<form method="get" action="../results.php" enctype="multipart/form-data">
-					<input type="text" name="user_query" placeholder="Search a Product"/ > 
-					<input type="submit" name="search" value="Search" />
-				</form>
-			
-			</div>
-			
-		</div>
+			<form class="navbar-form navbar-left" action="results.php" enctype="multipart/form-data" method="get">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search" name="user_query">
+                  <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit" name="search">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </div>
+              </div>
+            </form>
+
+		  
+		  </div>
+		</nav>
 		<!--Navigation Bar ends-->
 	
 		<!--Content wrapper starts-->
 		<div class="content_wrapper">
 		
-			<div id="sidebar">
+			<nav id="sidebar">
 			
-				<div id="sidebar_title">My Account:</div>
+			<div class="sidebar-header">
+			    <h3>My Account:</h3>
+			  </div>
 				
-				<ul id="cats">
+				<ul class="list-unstyled components">
 				<?php 
 				if(isset($_SESSION['customer_email'])){
 				$user = $_SESSION['customer_email'];
@@ -91,7 +102,7 @@ else{
 				
 				<ul>
 				
-				</div>
+			</nav>
 					
 		
 			<div id="content_area">
@@ -113,11 +124,11 @@ else{
 					<?php 
 					if(!isset($_SESSION['customer_email'])){
 					
-					echo "<a href='../checkout.php' style='color:orange;'>Login</a>";
+					echo "<a href='../checkout.php' ><button type='button' class='btn btn-primary'>Login</button></a>";
 					
 					}
 					else {
-					echo "<a href='logout.php' style='color:orange;'>Logout</a>";
+					echo "<a href='logout.php' ><button type='button' class='btn btn-primary'>Login</button></a>";
 					}
 					
 					
@@ -174,6 +185,14 @@ else{
 		
 		
 		<div id="footer">
+		<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-linkedin"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+		
+		
 		
 		<h2 style="text-align:center; padding-top:30px;">E-Commerce DBMS Project<br>Made By Mohit Gupta, Rahul Singh Rawat and Saif Haque<br>&copy; All Rights Reserved.</h2>
 		

@@ -32,8 +32,8 @@ if(isset($_GET['edit_brand'])){
 <form action="" method="post" style="padding:80px;">
 
 <b>Update Brand</b>
-<input type="text" name="new_brand" value="<?php echo $brand_title;?>"/> 
-<input type="submit" name="update_brand" value="Update Brand" /> 
+<input type="text" name="new_brand" value="<?php echo $brand_title;?>" class="form-control"/> 
+<input type="submit" name="update_brand" value="Update Brand" class="btn btn-success" style="float:right"/> 
 
 </form>
 

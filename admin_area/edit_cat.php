@@ -31,8 +31,8 @@ if(isset($_GET['edit_cat'])){
 <form action="" method="post" style="padding:80px;">
 
 <b>Update Category:</b>
-<input type="text" name="new_cat" value="<?php echo $cat_title;?>"/> 
-<input type="submit" name="update_cat" value="Update Category" /> 
+<input type="text" name="new_cat" value="<?php echo $cat_title;?>" class="form-control"/> 
+<input type="submit" name="update_cat" value="Update Category" class="btn btn-success" style="float:right"/> 
 
 </form>
 

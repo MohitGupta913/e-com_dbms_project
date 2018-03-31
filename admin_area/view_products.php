@@ -6,7 +6,7 @@ if(!isset($_SESSION['user_email'])){
 else {
 
 ?>
-<table width="795" align="center" bgcolor="pink"> 
+<table width="795" align="center" class="bg-blueviolet"> 
 
 	
 	<tr align="center">
@@ -39,13 +39,13 @@ else {
 		$i++;
 	
 	?>
-	<tr align="center">
+	<tr align="left">
 		<td><?php echo $i;?></td>
 		<td><?php echo $pro_title;?></td>
 		<td><img src="product_images/<?php echo $pro_image;?>" width="60" height="60"/></td>
 		<td><?php echo $pro_price;?></td>
-		<td><a href="index.php?edit_pro=<?php echo $pro_id; ?>">Edit</a></td>
-		<td><a href="delete_pro.php?delete_pro=<?php echo $pro_id;?>">Delete</a></td>
+		<td><a href="index.php?edit_pro=<?php echo $pro_id; ?>" style="color:red">Edit</a></td>
+		<td><a href="delete_pro.php?delete_pro=<?php echo $pro_id;?>" style="color:red">Delete</a></td>
 	
 	</tr>
 	<?php } ?>

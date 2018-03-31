@@ -9,7 +9,7 @@ else {
 
 ?>
 
-<table width="795" align="center" bgcolor="pink"> 
+<table width="795" align="center" class="bg-blueviolet"> 
 
 	
 	<tr align="center">
@@ -41,12 +41,12 @@ else {
 		$i++;
 	
 	?>
-	<tr align="center">
+	<tr align="left">
 		<td><?php echo $i;?></td>
 		<td><?php echo $c_name;?></td>
 		<td><?php echo $c_email;?></td>
 		<td><img src="../customer/customer_images/<?php echo $c_image;?>" width="50" height="50"/></td>
-		<td><a href="delete_c.php?delete_c=<?php echo $c_id;?>">Delete</a></td>
+		<td><a href="delete_c.php?delete_c=<?php echo $c_id;?>" style="color:red">Delete</a></td>
 	
 	</tr>
 	<?php } ?>

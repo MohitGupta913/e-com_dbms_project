@@ -119,7 +119,7 @@ include("includes/db.php");
 				
 			<form action="" method="post" enctype="multipart/form-data">
 			
-				<table align="center" width="700" bgcolor="skyblue">
+				<table align="center" width="700" class="bg-cornflowerblue">
 					
 					<tr align="center">
 						<th>Remove</th>

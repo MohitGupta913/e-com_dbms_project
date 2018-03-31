@@ -6,7 +6,7 @@
 ?>
 
 
-<table width="795" align="center" bgcolor="pink"> 
+<table width="765" align="center" class="bg-cornflowerblue"> 
 
 	
 	<tr align="center">

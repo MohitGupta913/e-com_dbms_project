@@ -12,8 +12,8 @@ else {
 <form action="" method="post" style="padding:80px;">
 
 <b>Insert New Category:</b>
-<input type="text" name="new_cat" required/> 
-<input type="submit" name="add_cat" value="Add Category" /> 
+<input type="text" name="new_cat" required class="form-control"/> 
+<input type="submit" name="add_cat" value="Add Category" style="float:right" class="btn btn-success"/> 
 
 </form>
 

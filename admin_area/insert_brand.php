@@ -12,8 +12,8 @@ else {
 <form action="" method="post" style="padding:80px;">
 
 <b>Insert New Brand:</b>
-<input type="text" name="new_brand" required/> 
-<input type="submit" name="add_brand" value="Add Brand" /> 
+<input type="text" name="new_brand" required class="form-control"/> 
+<input type="submit" name="add_brand" value="Add Brand" class="btn btn-success" style="float:right"/> 
 
 </form>
 

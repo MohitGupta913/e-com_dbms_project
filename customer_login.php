@@ -14,27 +14,27 @@ include("includes/db.php");
 			
 			<tr>
 				<td align="right"><b>Email:</b></td>
-				<td><input type="text" name="email" placeholder="enter email" required/></td>
+				<td><input type="text" name="email" placeholder="enter email" required/ class="form-control"></td>
 			</tr>
 			
 			<tr>
 				<td align="right"><b>Password:</b></td>
-				<td><input type="password" name="pass" placeholder="enter password" required/></td>
+				<td><input type="password" name="pass" placeholder="enter password" required/ class="form-control"></td>
 			</tr>
 			
 			<tr align="center">
-				<td colspan="3"><a href="forgot_pass.php?enter_email">Forgot Password?</a></td>
+				<td colspan="3"><a href="forgot_pass.php?enter_email" style="color:black">Forgot Password?</a></td>
 			</tr>
 			
 			<tr align="center">
-				<td colspan="3"><input type="submit" name="login" value="Login" /></td>
+				<td colspan="3"><input type="submit" name="login" value="Login" class="btn btn-primary"/></td>
 			</tr>
 			
 		
 		
 		</table> 
 	
-			<h2 style="float:right; padding-right:20px;"><a href="customer_register.php" style="text-decoration:none;">New? Register Here</a></h2>
+			<h2 style="float:right; padding-right:20px;"><a href="customer_register.php" style="text-decoration:none; color:black">New? Register Here</a></h2>
 	
 	
 	</form>

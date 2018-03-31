@@ -18,7 +18,7 @@ include("functions/functions.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 	</head>
 	
-<body>
+<body  background="images/ecommerce2.jpg">
 	
 	<!--Main Container starts here-->
 	<div class="main_wrapper">
@@ -26,8 +26,8 @@ include("functions/functions.php");
 		<!--Header starts here-->
 		<div class="header_wrapper">
 		
-			<a href="index.php"><img id="logo" src="images/logo.gif" /> </a>
-			<img id="banner" src="images/ad_banner.gif" />
+		<a href="index.php"><img id="logo" src="images/logo_new.jpg" /> </a>
+			<img id="banner" src="images/jet-1.gif" />
 		</div>
 		<!--Header ends here-->
 		
@@ -87,7 +87,7 @@ include("functions/functions.php");
 						<tr>
 							<td><span style='color:white;'>Select Category</span></td>
 							<td align="right">
-								<select name='filter_cat'>
+								<select name='filter_cat' class="form-control">
 									<option value='0'>All</option>
 									
 									<?php
@@ -110,7 +110,7 @@ include("functions/functions.php");
 						<tr>
 							<td><span style='color:white;'>Select Brand</span></td>
 							<td align="right">
-								<select name='filter_brand' >
+								<select name='filter_brand' class="form-control">
 									<option value='0'>All</option>
 									
 									<?php
@@ -131,13 +131,13 @@ include("functions/functions.php");
 						</tr>
 						<tr>
 							<td><span style='color:white;'>Order</span></td>
-							<td align="right"><select name='order'>
+							<td align="right"><select name='order' class="form-control">
 								<option value='1'>Price Low to High</option>
 								<option value='2'>Price High to Low</option>
 							</select></td>
 						</tr>
 						</table><br>
-						<input type='submit' name='filter' value='Filter'>
+						<input type='submit' name='filter' value='Filter'  class="btn btn-success" >
 					</form>
 				
 				<ul>

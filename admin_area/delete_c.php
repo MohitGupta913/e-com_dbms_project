@@ -12,18 +12,24 @@
 	$file_link = "../customer/customer_images/{$file}";
 
 
-	if( file_exists($file_link)){
-		unlink($file_link);
-	}
+	
 	
 	$delete_c = "delete from customers where customer_id='$delete_id'"; 
 	
 	$run_delete = mysqli_query($con, $delete_c); 
 	
 	if($run_delete){
+		if( file_exists($file_link)){
+			unlink($file_link);
+		}
 	
 	echo "<script>alert('A customer has been deleted!')</script>";
 	echo "<script>window.open('index.php?view_customers','_self')</script>";
+	}
+	else{
+	
+		echo "<script>alert('There is some error in deleting this account!')</script>";
+		echo "<script>window.open('index.php?view_customers','_self')</script>";
 	}
 	
 	}

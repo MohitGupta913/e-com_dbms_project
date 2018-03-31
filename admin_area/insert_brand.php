@@ -33,6 +33,11 @@ include("includes/db.php");
 	echo "<script>alert('New Brand has been inserted!')</script>";
 	echo "<script>window.open('index.php?view_brands','_self')</script>";
 	}
+	else{
+	
+		echo "<script>alert('There is some error in inserting new brand!')</script>";
+		echo "<script>window.open('index.php?view_brands','_self')</script>";
+		}
 	}
 
 ?>

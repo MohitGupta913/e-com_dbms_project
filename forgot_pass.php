@@ -232,15 +232,21 @@ if(isset($_POST['submit_pass'])){
         $email = $_SESSION['customer_email'];
         $find_c = "update customers set customer_pass='$new_pass' where customer_email='$email'";
     
-    $f_c = mysqli_query($con, $find_c);
+		$f_c = mysqli_query($con, $find_c);
+		
+		//$up_customer = mysqli_num_rows($f_c); 
+		if(f_c){
+			session_destroy(); 
+			echo "<script>alert('Password updated Successfully!')</script>";
+			echo "<script>window.open('checkout.php','_self')</script>";
+		}
+		else{
+			session_destroy(); 
+			echo "<script>alert('There is some error in changing password!')</script>";
+			echo "<script>window.open('checkout.php','_self')</script>";
+		}
     
-    $up_customer = mysqli_num_rows($f_c); 
-    
-    session_destroy(); 
-    echo "<script>alert('Password updated Successfully!')</script>";
-    echo "<script>window.open('checkout.php','_self')</script>";
-    
-}
+	}
     
     
 }

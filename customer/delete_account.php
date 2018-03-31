@@ -25,6 +25,17 @@ include("includes/db.php");
 	
 	if(isset($_POST['yes'])){
 	
+	$cus_image = "select * from customers where customer_email='$user'";
+	$run_cus_image = mysqli_query($con, $cus_image);
+	$cus_image_link = mysqli_fetch_array($run_cus_image);
+	$file = $cus_image_link['customer_image'];
+	$file_link = "customer_images/{$file}";
+
+
+	if( file_exists($file_link)){
+		unlink($file_link);
+	}
+	
 	$delete_customer = "delete from customers where customer_email='$user'";
 	
 	$run_customer = mysqli_query($con,$delete_customer); 

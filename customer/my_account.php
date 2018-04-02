@@ -128,7 +128,7 @@ else{
 					
 					}
 					else {
-					echo "<a href='logout.php' ><button type='button' class='btn btn-primary'>Login</button></a>";
+					echo "<a href='logout.php' ><button type='button' class='btn btn-primary'>Logout</button></a>";
 					}
 					
 					

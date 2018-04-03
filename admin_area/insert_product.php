@@ -21,6 +21,7 @@ include("includes/db.php");
 
 
 	<form action="" method="post" enctype="multipart/form-data"> 
+
 		
 		<table align="center" width="795" border="2" class="bg-blueviolet">
 			

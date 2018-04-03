@@ -82,7 +82,7 @@ include("functions/functions.php");
 					
 					<span style="float:right; font-size:18px; padding:5px; line-height:40px;">
 					
-					Welcome Guest! <b style="color:yellow">Shopping Cart -</b> Total Items: Total Price: <a href="cart.php" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-shopping-cart" ></span> Shopping Cart</a>
+					Welcome Guest! <b style="color:yellow">Shopping Cart -</b> Total Items: Total Price: <a href="cart.php" class="btn btn-info btn-lg" style="font-size:11px"><span class="glyphicon glyphicon-shopping-cart" style="font-size:10px"></span> Shopping Cart</a>
 					
 					
 					

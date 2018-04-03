@@ -28,7 +28,10 @@ footer, header, hgroup, menu, nav, section {
 }
 
 
+body {
 
+	background-attachment: fixed;
+}
 
 
 
@@ -42,15 +45,21 @@ background:black;
 
 .header_wrapper{
 width:1000px;
-height:200px;
+height:150px;
 margin:auto;
 
 }
 
-#logo {float:left; width:300px; height:200px}
+#logo {float:left; width:300px; height:150px}
 
-#banner {float:right; width:700px; height:200px}
+#banner {float:right; width:700px; height:150px}
 
+
+
+i {
+
+	height:20px;
+}
 
 
 .content_wrapper {
@@ -58,6 +67,7 @@ margin:auto;
     align-items: stretch;
 width:1000px;
 margin:auto;
+
 background:pink;
 
 }
@@ -100,6 +110,7 @@ text-align:center;
   color: #7386D5;
   background: #fff;
 }
+ 
 
 
 
@@ -123,7 +134,7 @@ margin-bottom:10px;
 
 #footer {
 width:1000px;
-height:250px;
+height:170px;
 background:#330033;
 clear:both;
 

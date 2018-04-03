@@ -18,7 +18,7 @@ include("functions/functions.php");
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
 	</head>
 	
-<body  background="images/ecommerce2.jpg">
+<body  background="images/ecommerce2.jpg" >
 	
 	<!--Main Container starts here-->
 	<div class="main_wrapper">
@@ -71,7 +71,7 @@ include("functions/functions.php");
 				
 				<?php getCats(); ?>
 				
-				<ul>
+</ul>
 					
 				<div class="sidebar-header"><h3>Brands</h3></div>
 				
@@ -79,7 +79,7 @@ include("functions/functions.php");
 					
 					<?php getBrands(); ?>
 				
-				<ul>
+</ul>
 				<div class="sidebar-header"><h3>Filter</h3></div>
 				
 				<ul class="list-unstyled components">
@@ -139,10 +139,10 @@ include("functions/functions.php");
 							</select></td>
 						</tr>
 						</table><br>
-						<input type='submit' name='filter' value='Filter'  class="btn btn-success" >
+						<input type='submit' name='filter' value='Filter'  class="btn btn-success" style="margin : 0 65px;">
 					</form>
 				
-				<ul>
+									</ul>
 			
 			
 			</nav>
@@ -164,7 +164,7 @@ include("functions/functions.php");
 					}
 					?>
 					
-					<b style="color:yellow">Shopping Cart -</b> Total Items: <?php total_items();?> Total Price: <?php total_price(); ?> <a href="cart.php" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-shopping-cart" ></span> Shopping Cart</a>
+					<b style="color:yellow">Shopping Cart -</b> Total Items: <?php total_items();?> Total Price: <?php total_price(); ?> <a href="cart.php" class="btn btn-info btn-lg" style="font-size:11px"><span class="glyphicon glyphicon-shopping-cart" style="font-size:10px"></span> Shopping Cart</a>
 					
 					
 					<?php 
@@ -201,12 +201,12 @@ include("functions/functions.php");
 		
 		
 		<div id="footer">
-		<a href="#" class="fa fa-facebook"></a>
+		<!-- <a href="#" class="fa fa-facebook"></a>
 <a href="#" class="fa fa-twitter"></a>
 <a href="#" class="fa fa-google"></a>
 <a href="#" class="fa fa-linkedin"></a>
 <a href="#" class="fa fa-youtube"></a>
-<a href="#" class="fa fa-instagram"></a>
+<a href="#" class="fa fa-instagram"></a> -->
 		
 		
 		<h2 style="text-align:center; padding-top:30px;">E-Commerce DBMS Project<br>Made By Mohit Gupta, Rahul Singh Rawat and Saif Haque<br>&copy; All Rights Reserved.</h2>

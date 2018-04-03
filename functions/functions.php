@@ -235,7 +235,7 @@ function getRecomPro(){
 
 	while($row_pr=mysqli_fetch_array($run_pr)){
 		$pro_c = $row_pr['product_cat'];
-		$x = "select * from products where product_cat='$pro_c'";
+		$x = "select * from products where product_cat='$pro_c' order by RAND() LIMIT 0,8";
 
 		$run_pro = mysqli_query($con, $x); 
 		$count_pro = mysqli_num_rows($run_pro);

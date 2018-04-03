@@ -177,7 +177,8 @@ include("functions/functions.php");
 			
 				<div id="products_box">
 				
-				<?php getPro(); ?>
+				<?php if(!isset($_SESSION['customer_email'])) getPro();
+						else getRecomPro(); ?>
 				<?php getCatPro(); ?>
 				<?php getBrandPro(); ?>
 				<?php filter(); ?>

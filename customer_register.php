@@ -259,7 +259,7 @@ include("includes/db.php");
 		
 		echo "<script>alert('Account has been created successfully, Thanks!')</script>";
 		
-		echo "<script>window.open('checkout.php','_self')</script>";
+		echo "<script>window.open('cart.php','_self')</script>";
 		
 		
 		}

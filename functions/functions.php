@@ -219,6 +219,97 @@ function getPro(){
 
 }
 
+function getRecomPro(){
+	global $con; 
+	$t_p = 30;
+	$email = $_SESSION['customer_email'];
+	$find_c = "select * from customers where customer_email='$email'";
+	$run_c = mysqli_query($con, $find_c);
+	$c =mysqli_fetch_array($run_c);
+	$cust_id = $c['customer_id'];
+
+	$pro = "select product_cat from products p inner join orders o on p.product_id = o.p_id where o.c_id='$cust_id' group by product_cat having count(*)>1 order by count(*) desc";
+	$run_pr = mysqli_query($con, $pro);
+	$count_p = mysqli_num_rows($run_pr);
+	if($count_p!=0) echo "<h1>Deals recommended for you</h1>";
+
+	while($row_pr=mysqli_fetch_array($run_pr)){
+		$pro_c = $row_pr['product_cat'];
+		$x = "select * from products where product_cat='$pro_c'";
+
+		$run_pro = mysqli_query($con, $x); 
+		$count_pro = mysqli_num_rows($run_pro);
+		$t_p = $t_p-$count_pro;
+		
+
+		while($row_pro=mysqli_fetch_array($run_pro)){
+		
+			$pro_id = $row_pro['product_id'];
+			$pro_cat = $row_pro['product_cat'];
+			$pro_brand = $row_pro['product_brand'];
+			$pro_title = $row_pro['product_title'];
+			$pro_price = $row_pro['product_price'];
+			$pro_image = $row_pro['product_image'];
+		
+			echo "
+					<div id='single_product'>
+					
+						<h3>$pro_title</h3>
+						
+						<img src='admin_area/product_images/$pro_image' width='180' height='180' />
+						
+						<p><b> Price: $ $pro_price </b></p>
+						
+						<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
+						
+						<a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to Cart</button></a>
+					
+					</div>
+			
+			
+			";
+		
+		}
+	}
+	echo "<br>";
+	if($t_p>0) echo "<h1>Other Products</h1>";
+
+	$xy = "select * from products where product_cat not in (select product_cat from products p inner join orders o on p.product_id = o.p_id where o.c_id='$cust_id' group by product_cat having count(*)>1 order by count(*) desc) order by RAND() LIMIT 0,$t_p";
+
+	$xyz = mysqli_query($con, $xy); 
+	
+	while($row_p=mysqli_fetch_array($xyz)){
+	
+		$pro_id = $row_p['product_id'];
+		$pro_cat = $row_p['product_cat'];
+		$pro_brand = $row_p['product_brand'];
+		$pro_title = $row_p['product_title'];
+		$pro_price = $row_p['product_price'];
+		$pro_image = $row_p['product_image'];
+	
+		echo "
+				<div id='single_product'>
+				
+					<h3>$pro_title</h3>
+					
+					<img src='admin_area/product_images/$pro_image' width='180' height='180' />
+					
+					<p><b> Price: $ $pro_price </b></p>
+					
+					<a href='details.php?pro_id=$pro_id' style='float:left;'>Details</a>
+					
+					<a href='index.php?add_cart=$pro_id'><button style='float:right'>Add to Cart</button></a>
+				
+				</div>
+		
+		
+		";
+	
+	}
+
+
+}
+
 function getCatPro(){
 
 	if(isset($_GET['cat'])){

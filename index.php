@@ -84,7 +84,7 @@ include("functions/functions.php");
 				
 				<ul class="list-unstyled components">
 					
-					<form action='index.php' method='post'>
+					<form action='index.php' method='post' style="margin:0 auto;">
 					<table align='center'>
 						<tr>
 							<td><span style='color:white;'>Select Category</span></td>

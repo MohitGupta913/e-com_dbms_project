@@ -33,7 +33,9 @@ body {
 	background-attachment: fixed;
 }
 
-
+.navbar{
+	margin-bottom:0 !important;
+}
 
 
 .main_wrapper{
@@ -143,7 +145,7 @@ margin-bottom:10px;
 	
 
 	
-	#shopping_cart {width:800px; height:100px; background:black; color:white;}
+	#shopping_cart {width:800px; height:80px; background:black; color:white;}
 
 	.bg-cornflowerblue{
 		background:cornflowerblue;
@@ -155,7 +157,7 @@ width:1000px;
 height:170px;
 background:#330033;
 clear:both;
-
+margin-top:-19px;
 
 }
 
@@ -164,6 +166,14 @@ clear:both;
 	color: antiquewhite;
 }
 
+table {
+    border-collapse: collapse !important;
+}
+
+td {
+    padding-top: .5em !important;
+    padding-bottom: .5em !important;
+}
 
   
   

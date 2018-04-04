@@ -16,9 +16,9 @@ else {
 		<title>This is Admin Panel</title> 
 
 		<script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-+		<script>
-+				tinymce.init({selector:'textarea'});
-+		</script>
+		<script>
+				tinymce.init({selector:'textarea'});
+		</script>
 		<meta charset="utf-8"> 
     <meta name="viewport" content="width=1000px, initial-scale=1">	 
 	<link rel="stylesheet" href="styles/style.css" media="all" />
@@ -38,7 +38,7 @@ else {
 		<div id="header"></div>
 		
 		<nav id="sidebar">
-		<div class="sidebar-header"
+		<div class="sidebar-header">
 		<h3 >Manage Content</h3>
 		</div>	
 			<a href="index.php?insert_product">Insert New Product</a>
@@ -163,3 +163,14 @@ else {
 </html>
 
 <?php } ?>
+
+<?php 
+
+echo "<script>
+$(document).ready(function() {
+	var height = Math.max($('#left').height(), $('#sidebar').height());
+	$('#left').height(height);
+	$('#sidebar').height(height);
+})</script>";
+
+?>

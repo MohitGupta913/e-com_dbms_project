@@ -184,8 +184,7 @@ include("includes/db.php");
 					</tr>
 					
 					
-				<?php } } ?>
-				
+				<?php } } echo "<br>";?>
 				<tr>
 						<td colspan="4" align="right"><b>Sub Total:</b></td>
 						<td><?php echo "$" . $total;?></td>

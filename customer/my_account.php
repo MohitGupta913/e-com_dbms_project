@@ -31,7 +31,7 @@ else{
 		<!--Header starts here-->
 		<div class="header_wrapper">
 		
-		<a href="index.php"><img id="logo" src="../images/logo_new.jpg" /> </a>
+		<a href="../index.php"><img id="logo" src="../images/logo_new.jpg" /> </a>
 			<img id="banner" src="../images/jet-1.gif" />
 		</div>
 		<!--Header ends here-->

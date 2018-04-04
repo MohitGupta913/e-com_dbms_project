@@ -8,7 +8,7 @@ if(!isset($_SESSION['user_email'])){
 else {
 
 ?>
-<table width="795" align="center" class="bg-blueviolet"> 
+<table width="795" align="center"> 
 
 	
 	<tr align="center">

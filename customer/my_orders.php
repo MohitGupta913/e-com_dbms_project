@@ -1,3 +1,9 @@
+<style>
+	.abc {
+		float: right !important;
+	}
+</style>
+
 <?php
 	if(!isset($_SESSION['customer_email'])){
 		echo "<script>window.open('../checkout.php','_self')</script>";
@@ -13,7 +19,7 @@
 		<td colspan="6"><h2>Your Orders details:</h2></td>
 	</tr>
 	
-	<tr align="center" bgcolor="skyblue">
+	<tr align="center">
 		<th>S.N</th>
 		<th>Product (S)</th>
 		<th>Quantity</th>
@@ -64,7 +70,7 @@
 		<td><?php echo $i;?></td>
 		<td>
 		<?php echo $pro_title;?>
-		<img src="../admin_area/product_images/<?php echo $pro_image;?>" width="50" height="50" />
+		<img src="../admin_area/product_images/<?php echo $pro_image;?>" width="50" height="50" class="abc"/>
 		</td>
 		<td><?php echo $qty;?></td>
 		<td><?php echo $amt;?></td>

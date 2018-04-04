@@ -30,7 +30,9 @@ footer, header, hgroup, menu, nav, section {
 
 
 
-
+.navbar{
+	margin-bottom:0 !important;
+}
 
 
 .main_wrapper{
@@ -117,9 +119,9 @@ margin-bottom:10px;
 	
   #shopping_cart {width:800px; height:50px; background:black; color:white;}
   
-  .bg-cornflowerblue{
+  /* .bg-cornflowerblue{
     background:cornflowerblue;
-  }
+  } */
 
 
   #footer {
@@ -143,4 +145,11 @@ margin-bottom:10px;
 
 
 
-
+    table {
+        border-collapse: collapse !important;
+    }
+    
+    td {
+        padding-top: .5em !important;
+        padding-bottom: .5em !important;
+    }

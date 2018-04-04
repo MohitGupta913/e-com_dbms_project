@@ -48,23 +48,23 @@ body {
 	}
 	
 	#left{
-	width:800px;
-	height:800px;
+	width:830px;
+	min-height:542px;
 	background-color: skyblue;
     float:left;
 	}
 
 
 	
-	table.bg-blueviolet {
+	/* table.bg-blueviolet {
 	  background: blueviolet;
-	}
+	} */
 	#sidebar {
 		  background: black;
 		color: white;
 		transition: all 0.3s;
-	width:200px;
-	height:800px;
+	width:170px;
+	min-height:542px;
 	float:right;
 	}
 	
@@ -90,3 +90,13 @@ body {
 	}
 
 
+	table {
+		border-collapse: collapse !important;
+		margin:0 auto !important;
+		float:none !important;
+	}
+	
+	td {
+		padding-top: .5em !important;
+		padding-bottom: .5em !important;
+	}

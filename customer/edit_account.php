@@ -90,12 +90,12 @@
 						</tr>
 						
 						<tr>
-							<td align="right">Customer Address</td>
+							<td align="right">Customer Address:</td>
 							<td><input type="text" name="c_address" value="<?php echo $address;?>" class="form-control"/></td>
 						</tr>
 
 						<tr>
-							<td align="right">Customer Secret</td>
+							<td align="right">Customer Secret:</td>
 							<td><input type="text" name="c_secret" value="<?php echo $secret;?>" class="form-control"/></td>
 						</tr>
 						

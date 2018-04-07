@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2018 at 05:46 PM
--- Server version: 10.1.30-MariaDB
--- PHP Version: 5.6.33
+-- Generation Time: Apr 07, 2018 at 03:24 PM
+-- Server version: 10.1.31-MariaDB
+-- PHP Version: 5.6.34
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -126,8 +126,8 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_secret`) VALUES
-(6, '119.157.220.50', 'Abdul Wali', 'awpareshan@gmail.com', 'walikhan', 'Pakistan', 'Karachi', '3243423', 'dfads', 'abdul-wali-ustaad1.jpg', ''),
-(7, '::1', 'Mohit Gupta', 'mohit@gmail.com', 'mohit', 'India', 'Delhi', '1234567890', 'Shanti Mohalla', 'WhatsApp Image 2018-01-05 at 10.11.32 AM.jpeg', '');
+(8, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'rahul', 'India', 'Delhi', '565467', 'D-58 Galli No.-3 East Vinod Nagar', 'paypal.png', 'rahul'),
+(11, '::1', 'saif haque', 'saif@gmail.com', 'saifhaque', 'India', 'Delhi', '86576499', 'D-58 Galli No.-3 East Vinod Nagar', '', 'saif');
 
 --
 -- Triggers `customers`
@@ -163,8 +163,32 @@ CREATE TABLE `cust_backup` (
 --
 
 INSERT INTO `cust_backup` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`) VALUES
+(0, '::1', 'rsr', 'rahul@gmail.com', 'rahul', 'India', 'delhi', '987898789', 'dgh', 'paypal_button.png'),
+(1, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'rahul', 'India', 'Delhi', '9939', 'D-58 Galli No.-3 East Vinod Nagar', 'paypal_button.png'),
 (7, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'rahul', 'India', 'Delhi', '09821889422', 'east vinod nagar', 'favicon.ico'),
-(8, '::1', 'akash', 'akash@gmail.com', 'gupta', 'Select a Country', 'delhi', '7418529630', 'Shanti Mohalla', '39049797-punisher-wallpapers.jpg');
+(8, '::1', 'rar', 'rahul@gmail.com', 'rahul', 'India', 'Delhi', '456123789', 'D-58 Galli No.-3 East Vinod Nagar', 'paypal.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `delivery`
+--
+
+CREATE TABLE `delivery` (
+  `d_id` int(10) NOT NULL,
+  `d_name` varchar(255) NOT NULL,
+  `d_email` varchar(255) NOT NULL,
+  `d_password` varchar(100) NOT NULL,
+  `d_phone` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `delivery`
+--
+
+INSERT INTO `delivery` (`d_id`, `d_name`, `d_email`, `d_password`, `d_phone`) VALUES
+(1, 'mohan', 'mohan@gmail.com', 'mohan', '9878789867'),
+(2, 'ramesh kumar', 'ramesh@gmail.com', 'ramesh', '9878788987');
 
 -- --------------------------------------------------------
 
@@ -181,27 +205,39 @@ CREATE TABLE `orders` (
   `currency` varchar(255) NOT NULL,
   `invoice_no` int(100) NOT NULL,
   `status` text NOT NULL,
-  `order_date` date NOT NULL
+  `order_date` date NOT NULL,
+  `order_delivery` int(10) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `p_id`, `c_id`, `qty`, `amount`, `currency`, `invoice_no`, `status`, `order_date`) VALUES
-(5, 8, 5, 1, 0, '', 462643381, 'Shipped', '0000-00-00'),
-(6, 6, 5, 3, 0, '', 481994459, 'Completed', '2014-07-21'),
-(7, 9, 0, 1, 0, '', 1545302558, 'Completed', '2014-07-23'),
-(8, 5, 0, 2, 0, '', 705705316, 'in Progress', '2014-08-08'),
-(9, 7, 6, 1, 0, '', 1935681132, 'in Progress', '2014-08-08'),
-(10, 9, 6, 3, 0, '', 1817786416, 'in Progress', '2014-08-08'),
-(11, 5, 6, 2, 0, '', 423122154, 'in Progress', '2014-08-08'),
-(12, 8, 6, 4, 0, '', 496641685, 'in Progress', '2014-08-08'),
-(13, 8, 6, 1, 450, 'USD', 370935809, 'in Progress', '2018-03-29'),
-(14, 8, 6, 1, 1550, 'USD', 1888421494, 'in Progress', '2018-03-29'),
-(15, 11, 6, 1, 1400, 'USD', 1239155451, 'in Progress', '2018-03-29'),
-(16, 0, 6, 1, 0, 'USD', 1918677737, 'in Progress', '2018-03-29'),
-(17, 0, 7, 1, 0, 'USD', 1208155700, 'in Progress', '2018-03-30');
+INSERT INTO `orders` (`order_id`, `p_id`, `c_id`, `qty`, `amount`, `currency`, `invoice_no`, `status`, `order_date`, `order_delivery`) VALUES
+(5, 8, 5, 1, 0, '', 462643381, 'Shipped', '0000-00-00', 0),
+(6, 6, 5, 3, 0, '', 481994459, 'Paid', '2014-07-21', 2),
+(7, 9, 0, 1, 0, '', 1545302558, 'Paid', '2014-07-23', 2),
+(8, 5, 0, 2, 0, '', 705705316, 'Shipped', '2014-08-08', 0),
+(9, 7, 6, 1, 0, '', 1935681132, 'Paid', '2014-08-08', 2),
+(10, 9, 6, 3, 0, '', 1817786416, 'in Progress', '2014-08-08', 0),
+(11, 5, 6, 2, 0, '', 423122154, 'in Progress', '2014-08-08', 0),
+(12, 8, 6, 4, 0, '', 496641685, 'in Progress', '2014-08-08', 0),
+(13, 8, 6, 1, 450, 'USD', 370935809, 'in Progress', '2018-03-29', 0),
+(14, 8, 6, 1, 1550, 'USD', 1888421494, 'in Progress', '2018-03-29', 0),
+(15, 11, 6, 1, 1400, 'USD', 1239155451, 'in Progress', '2018-03-29', 0),
+(16, 0, 6, 1, 0, 'USD', 1918677737, 'in Progress', '2018-03-29', 0),
+(17, 0, 7, 1, 0, 'USD', 1208155700, 'in Progress', '2018-03-30', 0),
+(18, 9, 8, 1, 750, 'USD', 1753555780, 'Shipped', '2018-03-31', 0),
+(19, 7, 8, 2, 500, 'USD', 852968912, 'Shipped', '2018-03-31', 0),
+(20, 10, 8, 1, 400, 'USD', 1905018615, 'Shipped', '2018-03-31', 0),
+(21, 9, 11, 1, 500, 'USD', 1273673945, 'in Progress', '2018-03-31', 0),
+(22, 10, 11, 1, 400, 'USD', 106197433, 'in Progress', '2018-03-31', 0),
+(23, 9, 8, 2, 1000, 'USD', 993148793, 'Shipped', '2018-04-03', 0),
+(24, 10, 8, 1, 400, 'USD', 342868480, 'Shipped', '2018-04-07', 0),
+(25, 7, 8, 1, 250, 'USD', 1218230372, 'Paid', '2018-04-07', 2),
+(26, 9, 8, 1, 500, 'USD', 1301479772, 'Paid', '2018-04-07', 1),
+(27, 7, 8, 1, 250, 'USD', 1246389755, 'Paid', '2018-04-07', 2),
+(28, 10, 8, 1, 400, 'USD', 1698935958, 'Paid', '2018-04-07', 2);
 
 -- --------------------------------------------------------
 
@@ -259,8 +295,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_cat`, `product_brand`, `product_title`, `product_price`, `product_desc`, `product_image`, `product_keywords`) VALUES
-(5, 3, 4, 'Samsung Camera', 900, '<p>This is a great samsung mobile, you must buy it in order to have some really good fun.&nbsp;</p>', 'Samsung-Galaxy-Tab-tablet.jpg', 'Samsung, Cameras, Special'),
-(6, 3, 6, 'HTC mobile ', 200, '<p>this one is a great one.</p>', 'HTC-Google-Nexus-One-2.jpg', 'mobiles, new, special'),
+(5, 0, 0, 'Samsung Camera', 1000, '<p>This is a great samsung mobile, you must buy it in order to have some really good fun.&nbsp;</p>', '', 'Samsung, Cameras, Special'),
 (7, 2, 6, 'Toshiba Camera ', 250, '<p>This is a great camera...</p>', 'professional-video-camera.jpg', 'Toshiba, cameras, Special'),
 (8, 3, 5, 'Nokia Tablet', 450, '<p>this is a great thing....</p>', 'nokia-windows-200-dollar-tablet2-640x353.jpg', 'Samsung, Cameras, Special'),
 (9, 1, 2, 'Dell Pink Laptop', 500, '<p>this is a very nice <strong>laptop</strong> and I like it very much....</p>', '1.jpg', 'dell, laptops, new, special'),
@@ -308,6 +343,12 @@ ALTER TABLE `cust_backup`
   ADD PRIMARY KEY (`customer_id`);
 
 --
+-- Indexes for table `delivery`
+--
+ALTER TABLE `delivery`
+  ADD PRIMARY KEY (`d_id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -351,7 +392,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `cust_backup`
@@ -360,10 +401,16 @@ ALTER TABLE `cust_backup`
   MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
+-- AUTO_INCREMENT for table `delivery`
+--
+ALTER TABLE `delivery`
+  MODIFY `d_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `order_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `payments`

@@ -48,10 +48,7 @@
 							<td><input type="text" name="c_email" value="<?php echo $email;?>" required class="form-control"/></td>
 						</tr>
 						
-						<tr>
-							<td align="right">Customer Password:</td>
-							<td><input type="password" name="c_pass" value="<?php echo $pass;?>" required class="form-control"/></td>
-						</tr>
+						
 						
 						<tr>
 							<td align="right">Customer Image:</td>
@@ -150,7 +147,7 @@
 		
 		$c_name = $_POST['c_name'];
 		$c_email = $_POST['c_email'];
-		$c_pass = $_POST['c_pass'];
+		$c_pass = $pass;
 		$c_image = $_FILES['c_image']['name'];
 		$c_image_tmp = $_FILES['c_image']['tmp_name'];
 		$c_city = $_POST['c_city'];

@@ -277,7 +277,7 @@ function getRecomPro(){
 		}
 	}
 	echo "<br>";
-	if($t_p>0) echo "<h1>Other Products</h1>";
+	if($t_p>0&&$count_p!=0) echo "<h1>Other Products</h1>";
 
 	$xy = "select * from products where product_cat not in (select product_cat from products p inner join orders o on p.product_id = o.p_id where o.c_id='$cust_id' group by product_cat having count(*)>1 order by count(*) desc) order by RAND() LIMIT 0,$t_p";
 

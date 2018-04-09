@@ -35,7 +35,7 @@ include("includes/db.php");
 		$email = mysqli_real_escape_string($con, $_POST['email']);
 		$pass = mysqli_real_escape_string($con, $_POST['password']);
 	
-	$sel_user = "select * from delivery where d_email='$email' AND d_password='$pass'";
+	$sel_user = "select * from delivery where d_email='$email' AND d_password=aes_encrypt('$pass','ecommerce')";
 	
 	$run_user = mysqli_query($con, $sel_user); 
 	

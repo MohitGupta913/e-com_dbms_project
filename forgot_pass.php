@@ -237,7 +237,7 @@ if(isset($_POST['submit_pass'])){
     }
     else{
         $email = $_SESSION['customer_email'];
-        $find_c = "update customers set customer_pass='$new_pass' where customer_email='$email'";
+        $find_c = "update customers set customer_pass=aes_encrypt('$new_pass','ecommerce') where customer_email='$email'";
     
 		$f_c = mysqli_query($con, $find_c);
 		

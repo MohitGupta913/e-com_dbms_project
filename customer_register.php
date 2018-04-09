@@ -237,7 +237,7 @@ include("includes/db.php");
 		
 		move_uploaded_file($c_image_tmp,"customer/customer_images/$c_image");
 		
-		 $insert_c = "insert into customers (customer_ip,customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image, customer_secret) values ('$ip','$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image','$c_secret')";
+		 $insert_c = "insert into customers (customer_ip,customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image, customer_secret) values ('$ip','$c_name','$c_email',aes_encrypt('$c_pass','ecommerce'),'$c_country','$c_city','$c_contact','$c_address','$c_image','$c_secret')";
 	
 		$run_c = mysqli_query($con, $insert_c);
 		if(!$run_c){

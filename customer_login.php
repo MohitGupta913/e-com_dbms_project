@@ -46,7 +46,7 @@ include("includes/db.php");
 		$c_email = $_POST['email'];
 		$c_pass = $_POST['pass'];
 		
-		$sel_c = "select * from customers where customer_pass='$c_pass' AND customer_email='$c_email'";
+		$sel_c = "select * from customers where customer_pass = aes_encrypt('$c_pass','ecommerce') AND customer_email='$c_email'";
 		
 		$run_c = mysqli_query($con, $sel_c);
 		

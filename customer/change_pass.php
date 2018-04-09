@@ -46,7 +46,7 @@ include("includes/db.php");
 		$new_pass = $_POST['new_pass']; 
 		$new_again = $_POST['new_pass_again']; 
 		
-		$sel_pass = "select * from customers where customer_pass='$current_pass' AND customer_email='$user'";
+		$sel_pass = "select * from customers where customer_pass=aes_encrypt('$current_pass','ecommerce') AND customer_email='$user'";
 		
 		$run_pass = mysqli_query($con, $sel_pass); 
 		
@@ -65,7 +65,7 @@ include("includes/db.php");
 		}
 		else {
 		
-		$update_pass = "update customers set customer_pass='$new_pass' where customer_email='$user'";
+		$update_pass = "update customers set customer_pass=aes_encrypt('$new_pass','ecommerce') where customer_email='$user'";
 		
 		$run_update = mysqli_query($con, $update_pass); 
 		if(!$run_update){

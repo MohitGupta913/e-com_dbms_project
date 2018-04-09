@@ -220,6 +220,9 @@ function getPro(){
 }
 
 function getRecomPro(){
+	if(!isset($_GET['cat'])){
+		if(!isset($_GET['brand'])){
+			if(!isset($_POST['filter'])){
 	global $con; 
 	$t_p = 30;
 	$email = $_SESSION['customer_email'];
@@ -307,7 +310,7 @@ function getRecomPro(){
 	
 	}
 
-
+			}}}
 }
 
 function getCatPro(){

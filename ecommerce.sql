@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.7.7
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 07, 2018 at 03:24 PM
--- Server version: 10.1.31-MariaDB
--- PHP Version: 5.6.34
+-- Generation Time: Apr 09, 2018 at 02:41 PM
+-- Server version: 10.1.30-MariaDB
+-- PHP Version: 7.2.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -39,8 +39,9 @@ CREATE TABLE `admins` (
 --
 
 INSERT INTO `admins` (`user_id`, `user_email`, `user_pass`) VALUES
-(1, 'awpareshan@gmail.com', 'wali'),
-(2, 'saima@yahoo.com', 'khan');
+(3, 'rahul@gmail.com', 'ýŸ¤qÃü4ÍS¬m8>òÖŸ'),
+(4, 'mohit@gmail.com', 'U±œPù8½§ÚJã›òá'),
+(5, 'saif@gmail.com', '=R–]\Z‰-NŠÞ¦¿<Ül');
 
 -- --------------------------------------------------------
 
@@ -60,10 +61,20 @@ CREATE TABLE `brands` (
 INSERT INTO `brands` (`brand_id`, `brand_title`) VALUES
 (1, 'HP'),
 (2, 'DELL'),
-(3, 'LG'),
+(3, 'Apple'),
 (4, 'Samsung'),
 (5, 'Sony'),
-(6, 'Toshiba');
+(6, 'Toshiba'),
+(7, 'Motorola'),
+(8, 'Nikon'),
+(9, 'Acer'),
+(10, 'Asus'),
+(11, 'Canon'),
+(12, 'Lenovo'),
+(13, 'HTC'),
+(14, 'OnePlus'),
+(15, 'Nokia'),
+(16, 'Panasonic');
 
 -- --------------------------------------------------------
 
@@ -97,9 +108,7 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 (2, 'Cameras'),
 (3, 'Mobiles'),
 (4, 'Computers'),
-(5, 'Banana'),
-(6, 'iPhones'),
-(7, 'Tablets');
+(5, 'Tablets');
 
 -- --------------------------------------------------------
 
@@ -126,8 +135,9 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`customer_id`, `customer_ip`, `customer_name`, `customer_email`, `customer_pass`, `customer_country`, `customer_city`, `customer_contact`, `customer_address`, `customer_image`, `customer_secret`) VALUES
-(8, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'rahul', 'India', 'Delhi', '565467', 'D-58 Galli No.-3 East Vinod Nagar', 'paypal.png', 'rahul'),
-(11, '::1', 'saif haque', 'saif@gmail.com', 'saifhaque', 'India', 'Delhi', '86576499', 'D-58 Galli No.-3 East Vinod Nagar', '', 'saif');
+(8, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'ýŸ¤qÃü4ÍS¬m8>òÖŸ', 'India', 'Delhi', '565467', 'D-58 Galli No.-3 East Vinod Nagar', 'breaking_bad_walter_white_bryan_cranston_skyler_white_anna_gunn_jesse_pinkman_98465_1920x1080.jpg', 'rahul'),
+(12, '::1', 'Mohit Gupta', 'mohit@yahoo.com', 'U±œPù8½§ÚJã›òá', 'India', 'Delhi', '9897876789', 'shanti mohalla', 'WhatsApp Image 2018-01-05 at 10.11.32 AM.jpeg', 'mohit'),
+(13, '::1', 'Saif Haque', 'saif@gmail.com', '=R–]\Z‰-NŠÞ¦¿<Ül', 'India', 'Delhi', '9767564534', 'VMH, DTU', 'PicsArt_12-17-12.03.08.jpg', 'saif');
 
 --
 -- Triggers `customers`
@@ -166,7 +176,8 @@ INSERT INTO `cust_backup` (`customer_id`, `customer_ip`, `customer_name`, `custo
 (0, '::1', 'rsr', 'rahul@gmail.com', 'rahul', 'India', 'delhi', '987898789', 'dgh', 'paypal_button.png'),
 (1, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'rahul', 'India', 'Delhi', '9939', 'D-58 Galli No.-3 East Vinod Nagar', 'paypal_button.png'),
 (7, '::1', 'Rahul Singh Rawat', 'rahulrawat1210@yahoo.co.in', 'rahul', 'India', 'Delhi', '09821889422', 'east vinod nagar', 'favicon.ico'),
-(8, '::1', 'rar', 'rahul@gmail.com', 'rahul', 'India', 'Delhi', '456123789', 'D-58 Galli No.-3 East Vinod Nagar', 'paypal.png');
+(8, '::1', 'rar', 'rahul@gmail.com', 'rahul', 'India', 'Delhi', '456123789', 'D-58 Galli No.-3 East Vinod Nagar', 'paypal.png'),
+(11, '::1', 'saif haque', 'saif@gmail.com', 'saifhaque', 'India', 'Delhi', '86576499', 'D-58 Galli No.-3 East Vinod Nagar', 'PicsArt_12-17-12.03.08.jpg');
 
 -- --------------------------------------------------------
 
@@ -187,8 +198,9 @@ CREATE TABLE `delivery` (
 --
 
 INSERT INTO `delivery` (`d_id`, `d_name`, `d_email`, `d_password`, `d_phone`) VALUES
-(1, 'mohan', 'mohan@gmail.com', 'mohan', '9878789867'),
-(2, 'ramesh kumar', 'ramesh@gmail.com', 'ramesh', '9878788987');
+(1, 'mohan', 'mohan@gmail.com', 'çé8O™r×æ¡Ò\"î#U', '9878789867'),
+(2, 'ramesh kumar', 'ramesh@gmail.com', 'RS³{šR7~yëý\ZÎbS', '9878788987'),
+(4, 'rajat', 'rajat@gmail.com', 'é~nì!†Fo)(xþ…õ', '9878564345');
 
 -- --------------------------------------------------------
 
@@ -214,64 +226,9 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `p_id`, `c_id`, `qty`, `amount`, `currency`, `invoice_no`, `status`, `order_date`, `order_delivery`) VALUES
-(5, 8, 5, 1, 0, '', 462643381, 'Shipped', '0000-00-00', 0),
-(6, 6, 5, 3, 0, '', 481994459, 'Paid', '2014-07-21', 2),
-(7, 9, 0, 1, 0, '', 1545302558, 'Paid', '2014-07-23', 2),
-(8, 5, 0, 2, 0, '', 705705316, 'Shipped', '2014-08-08', 0),
-(9, 7, 6, 1, 0, '', 1935681132, 'Paid', '2014-08-08', 2),
-(10, 9, 6, 3, 0, '', 1817786416, 'in Progress', '2014-08-08', 0),
-(11, 5, 6, 2, 0, '', 423122154, 'in Progress', '2014-08-08', 0),
-(12, 8, 6, 4, 0, '', 496641685, 'in Progress', '2014-08-08', 0),
-(13, 8, 6, 1, 450, 'USD', 370935809, 'in Progress', '2018-03-29', 0),
-(14, 8, 6, 1, 1550, 'USD', 1888421494, 'in Progress', '2018-03-29', 0),
-(15, 11, 6, 1, 1400, 'USD', 1239155451, 'in Progress', '2018-03-29', 0),
-(16, 0, 6, 1, 0, 'USD', 1918677737, 'in Progress', '2018-03-29', 0),
-(17, 0, 7, 1, 0, 'USD', 1208155700, 'in Progress', '2018-03-30', 0),
-(18, 9, 8, 1, 750, 'USD', 1753555780, 'Shipped', '2018-03-31', 0),
-(19, 7, 8, 2, 500, 'USD', 852968912, 'Shipped', '2018-03-31', 0),
-(20, 10, 8, 1, 400, 'USD', 1905018615, 'Shipped', '2018-03-31', 0),
-(21, 9, 11, 1, 500, 'USD', 1273673945, 'in Progress', '2018-03-31', 0),
-(22, 10, 11, 1, 400, 'USD', 106197433, 'in Progress', '2018-03-31', 0),
-(23, 9, 8, 2, 1000, 'USD', 993148793, 'Shipped', '2018-04-03', 0),
-(24, 10, 8, 1, 400, 'USD', 342868480, 'Shipped', '2018-04-07', 0),
-(25, 7, 8, 1, 250, 'USD', 1218230372, 'Paid', '2018-04-07', 2),
-(26, 9, 8, 1, 500, 'USD', 1301479772, 'Paid', '2018-04-07', 1),
-(27, 7, 8, 1, 250, 'USD', 1246389755, 'Paid', '2018-04-07', 2),
-(28, 10, 8, 1, 400, 'USD', 1698935958, 'Paid', '2018-04-07', 2);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `payments`
---
-
-CREATE TABLE `payments` (
-  `payment_id` int(100) NOT NULL,
-  `amount` int(100) NOT NULL,
-  `customer_id` int(100) NOT NULL,
-  `product_id` int(100) NOT NULL,
-  `trx_id` varchar(255) NOT NULL,
-  `currency` text NOT NULL,
-  `payment_date` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `payments`
---
-
-INSERT INTO `payments` (`payment_id`, `amount`, `customer_id`, `product_id`, `trx_id`, `currency`, `payment_date`) VALUES
-(1, 800, 5, 6, '31B07494JS505133P', 'USD', '0000-00-00'),
-(2, 500, 5, 9, '18747053K31546734', 'USD', '0000-00-00'),
-(3, 1000, 5, 9, '183154524M7953521', 'USD', '0000-00-00'),
-(4, 900, 5, 5, '8L053110TE658224T', 'USD', '2014-07-21'),
-(5, 450, 5, 8, '42M62596JN658381G', 'USD', '2014-07-21'),
-(6, 600, 5, 6, '1FC71986FP579232R', 'USD', '2014-07-21'),
-(7, 500, 0, 9, '0AH67056C64289013', 'USD', '2014-07-23'),
-(8, 1800, 0, 5, '1F431738AY795223E', 'USD', '2014-08-08'),
-(9, 250, 6, 7, '3G918931JL634141Y', 'USD', '2014-08-08'),
-(10, 1500, 6, 9, '0BF7586175203573G', 'USD', '2014-08-08'),
-(11, 1800, 6, 5, '7RS823437E828061K', 'USD', '2014-08-08'),
-(12, 1800, 6, 8, '84J65197FN011600G', 'USD', '2014-08-08');
+(34, 13, 8, 1, 1500, 'USD', 1937311512, 'Paid', '2018-04-09', 2),
+(33, 24, 8, 1, 8000, 'USD', 1425640089, 'Paid', '2018-04-09', 4),
+(32, 24, 8, 2, 16000, 'USD', 1784473689, 'Paid', '2018-04-09', 2);
 
 -- --------------------------------------------------------
 
@@ -295,12 +252,30 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`product_id`, `product_cat`, `product_brand`, `product_title`, `product_price`, `product_desc`, `product_image`, `product_keywords`) VALUES
-(5, 0, 0, 'Samsung Camera', 1000, '<p>This is a great samsung mobile, you must buy it in order to have some really good fun.&nbsp;</p>', '', 'Samsung, Cameras, Special'),
-(7, 2, 6, 'Toshiba Camera ', 250, '<p>This is a great camera...</p>', 'professional-video-camera.jpg', 'Toshiba, cameras, Special'),
-(8, 3, 5, 'Nokia Tablet', 450, '<p>this is a great thing....</p>', 'nokia-windows-200-dollar-tablet2-640x353.jpg', 'Samsung, Cameras, Special'),
-(9, 1, 2, 'Dell Pink Laptop', 500, '<p>this is a very nice <strong>laptop</strong> and I like it very much....</p>', '1.jpg', 'dell, laptops, new, special'),
-(10, 1, 1, 'HP Envy Laptop', 400, '<p>this is so much nice laptop..</p>', 'original.jpg', 'dell, laptops, new, special'),
-(11, 1, 2, 'Dell Laptop 123', 1000, '<p>this is a dell laptop!</p>', '', 'dell, laptop');
+(12, 5, 3, 'IPad', 5000, '<p>This is a very good tablet</p>', '91QlrgIeLOL._SY355_.jpg', 'Apple Tablets IPad'),
+(13, 3, 7, 'Moto G5', 1500, '<p>This is a great smartphone</p>', '260.jpg', 'Motorola Mobiles Moto G5'),
+(14, 2, 5, 'Sony Cybershot', 1000, '<p>Great camera</p>', '810_0754-460.jpg', 'Sony Cameras Sony Cybershot'),
+(15, 2, 8, 'Nikon D3400', 3800, '<p>Great camera</p>', '101428.jpg', 'Nikon Cameras Nikon D3400'),
+(16, 1, 6, 'Toshiba Tecra', 4000, '<p>Great laptop</p>', '469221-toshiba-satellite-s55t.jpg', 'Toshiba Laptops Toshiba Tecra '),
+(17, 4, 9, 'Acer Assembled', 5000, '<p>great computer</p>', 'acer-aspire-x3950-5804ec1d3df78cbc2882c2e8.jpg', 'Acer Computers Acer Assembled'),
+(18, 5, 10, 'Asus ZenPad', 1600, '<p>great tablet</p>', 'asus_tablet_01.jpg', 'Asus Tablets Asus ZenPad'),
+(19, 2, 11, 'Canon Ixus', 1000, '<p>great camera</p>', 'Canon-EOS-Rebel-T3i.jpg', 'Canon Cameras Canon Ixus'),
+(20, 4, 3, 'Apple iMac', 10000, '<p>great computer</p>', 'Computers-To-Buy..png', 'Apple Computers Apple iMac'),
+(21, 1, 9, 'Acer Switch', 1200, '<p>great laptop</p>', 'download (1).jpg', 'Acer Laptops Acer Switch'),
+(22, 1, 10, 'Asus Vivobook', 2700, '<p>great laptop</p>', 'download (2).jpg', 'Asus Laptops Asus Vivobook'),
+(23, 3, 4, 'Samsung Galaxy Note8', 7000, '<p>great mobile</p>', 'download (3).jpg', 'Samsung Mobiles Samsung Galaxy Note8'),
+(24, 3, 3, 'Apple iPhone 8', 8000, '<p>great mobile</p>', 'download (4).jpg', 'Apple Mobiles Apple iPhone 8'),
+(25, 1, 12, 'Lenovo Ideapad', 3000, '<p>great laptop</p>', 'download.jpg', 'Lenovo Laptops Lenovo Ideapad'),
+(26, 5, 4, 'Samsung Galaxy', 4000, '<p>great tablet</p>', 'Galaxy-Tab-S3-press-release_main_1.jpg', 'Samsung Tablets Samsung Galaxy'),
+(27, 0, 0, 'HTC Desire', 2000, '<p>great mobile</p>', 'htc-desire-510-white.jpg', 'HTC Mobiles HTC Desire'),
+(28, 4, 1, 'HP AIO', 4000, 'great computer', 'k2-_15c0de7e-51a1-4046-ba0f-1e2e74b21a7e.v1.jpg', 'HP Computers HP AIO'),
+(29, 1, 1, 'HP G5', 2000, '<p>great laptop</p>', 'Laptops-hp-Pro-Book-300x275.jpg', 'HP Laptops HP G5'),
+(30, 5, 12, 'Lenovo Tab4', 5000, '<p>great tablet</p>', 'lenovo-tablets-500x500.jpg', 'Lenovo Tablets Lenovo Tab4'),
+(31, 3, 14, 'OnePlus 5', 3500, '<p>great mobile</p>', 'Mobile-Phones-2017.jpg', 'OnePlus Mobiles OnePlus 5'),
+(32, 1, 3, 'MacBook Air', 7000, '<p>great laptop</p>', 'mpxt2hna.jpg', 'Apple Laptops MacBook Air'),
+(33, 4, 2, 'Dell Vostro', 5000, '<p>great computer</p>', 'nav_desktops_1115.jpg', 'Dell Laptops Dell Vostro'),
+(34, 3, 15, 'Nokia 6', 2500, '<p>great mobile</p>', 'Nokia_2_front-600x800.jpg', 'Nokia Mobiles Nokia 6'),
+(35, 3, 16, 'Panasonic Eluga', 2300, '<p>great mobile</p>', 'panasonic_eluga_turbo_2.jpg', 'Panasonic Mobiles Panasonic Eluga');
 
 --
 -- Indexes for dumped tables
@@ -355,12 +330,6 @@ ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`);
 
 --
--- Indexes for table `payments`
---
-ALTER TABLE `payments`
-  ADD PRIMARY KEY (`payment_id`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
@@ -374,13 +343,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `brands`
 --
 ALTER TABLE `brands`
-  MODIFY `brand_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `brand_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -392,37 +361,31 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `cust_backup`
 --
 ALTER TABLE `cust_backup`
-  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `customer_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `delivery`
 --
 ALTER TABLE `delivery`
-  MODIFY `d_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `d_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
-
---
--- AUTO_INCREMENT for table `payments`
---
-ALTER TABLE `payments`
-  MODIFY `payment_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `order_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

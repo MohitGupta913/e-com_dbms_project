@@ -183,8 +183,13 @@ if(isset($_GET['edit_pro'])){
 		//getting the image from the field
 		$product_image = $_FILES['product_image']['name'];
 		$product_image_tmp = $_FILES['product_image']['tmp_name'];
+		if(!$product_image){
+			$product_image=$pro_image;
+		}
+		else{
 		
 		move_uploaded_file($product_image_tmp,"product_images/$product_image");
+		}
 	
 		 $update_product = "update products set product_cat='$product_cat',product_brand='$product_brand',product_title='$product_title',product_price='$product_price',product_desc='$product_desc',product_image='$product_image', product_keywords='$product_keywords' where product_id='$update_id'";
 		 

@@ -23,14 +23,15 @@ else {
 		<th>Product (S)</th>
 		<th>Quantity</th>
 		<th>Amount</th>
-		<th>Invoice No</th>
+		<!-- <th>Invoice No</th> -->
 		<th>Order Date</th>
 		<th>Status</th>
+		<th>Delivery<br>Boy</th>
 	</tr>
 	<?php 
 	include("includes/db.php");
 	
-	$get_order = "select * from orders";
+	$get_order = "select * from orders order by order_date desc";
 	
 	$run_order = mysqli_query($con, $get_order); 
 	
@@ -47,6 +48,7 @@ else {
 		$c_id = $row_order['c_id'];
 		$invoice_no = $row_order['invoice_no'];
 		$order_date = $row_order['order_date'];
+		$del_id = $row_order['order_delivery'];
 		$i++;
 		
 		$get_pro = "select * from products where product_id='$pro_id'";
@@ -75,13 +77,25 @@ else {
 		</td>
 		<td><?php echo $qty;?></td>
 		<td><?php echo $amt.' ' .$curr;?></td>
-		<td><?php echo $invoice_no;?></td>
+	
 		<td><?php echo $order_date;?></td>
 		<?php
 		if($status == 'Shipped' || $status=='Paid')
-			echo "<td>$status</td>";
+			echo "<td >$status</td>";
 		else
-			echo "<td><a href='index.php?confirm_order= $order_id' style='color:red'>Ship Order</a></td>";
+			echo "<td ><a href='index.php?confirm_order= $order_id' style='color:red'>Ship Order</a></td>";
+		?>
+		<?php
+		
+		if($del_id == 0)
+			echo "<td >None</td>";
+		else{
+			$q_name = "select d_name from delivery where d_id = '$del_id'";
+			$run_name = mysqli_query($con, $q_name);
+			$fetch_name = mysqli_fetch_array($run_name);
+			$fetch_name_del = $fetch_name['d_name'];
+			echo "<td >$fetch_name_del</td>";
+		}
 		?>
 		
 	

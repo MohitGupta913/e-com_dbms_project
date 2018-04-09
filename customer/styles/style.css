@@ -28,6 +28,10 @@ footer, header, hgroup, menu, nav, section {
 }
 
 
+body {
+
+	background-attachment: fixed;
+}
 
 
 .navbar{
@@ -54,6 +58,10 @@ margin:auto;
 #banner {float:right; width:700px; height:200px}
 
 
+i {
+
+	height:20px;
+}
 
 .content_wrapper {
 	

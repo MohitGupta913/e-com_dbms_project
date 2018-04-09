@@ -3,7 +3,7 @@
 
 if(!isset($_SESSION['user_emails'])){
 	
-	echo "<script>window.open('login.php?not_admin=You are not an Authorised!','_self')</script>";
+	echo "<script>window.open('login.php?not_authorised=You are not Authorised!','_self')</script>";
 }
 else {
 

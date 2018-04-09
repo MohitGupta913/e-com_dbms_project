@@ -3,7 +3,7 @@ session_start();
 
 if(!isset($_SESSION['user_emails'])){
 	
-	echo "<script>window.open('login.php?not_admin=You are not an Authorised!','_self')</script>";
+	echo "<script>window.open('login.php?not_authorised=You are not Authorised!','_self')</script>";
 }
 else {
 
@@ -54,95 +54,21 @@ else {
 		
 			<a href="index.php?view_orders">View Orders</a>
 			<!--<a href="index.php?view_payments">View Payments</a>-->
-			<a href="logout.php">Admin Logout</a>
+			<a href="logout.php">Logout</a>
 		
 		</nav>
 		
 		<div id="left">
 		<h2 style="color:red; text-align:center;"><?php echo @$_GET['logged_in']; ?></h2>
 		<?php 
-		if(isset($_GET['insert_product'])){
-		
-		include("insert_product.php"); 
-		
-		}
-		if(isset($_GET['view_products'])){
-		
-		include("view_products.php"); 
-		
-		}
-		if(isset($_GET['edit_pro'])){
-		
-		include("edit_pro.php"); 
-		
-		}
-		if(isset($_GET['delete_pro'])){
-		
-			include("delete_pro.php"); 
-			
-			}
-		if(isset($_GET['insert_cat'])){
-		
-		include("insert_cat.php"); 
-		
-		}
-		
-		if(isset($_GET['view_cats'])){
-		
-		include("view_cats.php"); 
-		
-		}
-		
-		if(isset($_GET['edit_cat'])){
-		
-		include("edit_cat.php"); 
-		
-		}
-		if(isset($_GET['delete_cat'])){
-		
-			include("delete_cat.php"); 
-			
-			}
-		
-		if(isset($_GET['insert_brand'])){
-		
-		include("insert_brand.php"); 
-		
-		}
-		
-		if(isset($_GET['view_brands'])){
-		
-		include("view_brands.php"); 
-		
-		}
-		if(isset($_GET['edit_brand'])){
-		
-		include("edit_brand.php"); 
-		
-		}
-		if(isset($_GET['delete_brand'])){
-		
-			include("delete_brand.php"); 
-			
-			}
 		if(isset($_GET['view_customers'])){
 		
 		include("view_customers.php"); 
 		
 		}
-		if(isset($_GET['delete_c'])){
-		
-			include("delete_c.php"); 
-			
-			}
 		if(isset($_GET['view_orders'])){
 		
 		include("view_orders.php"); 
-		
-		}
-		if(isset($_GET['view_payments'])){
-		
-		include("view_payments.php"); 
 		
 		}
 		if(isset($_GET['confirm_orders'])){
@@ -150,15 +76,7 @@ else {
 		}
 		?>
 		</div>
-
-
-
-
-
-
 	</div>
-
-
 </body>
 </html>
 

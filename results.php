@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <?php 
-
+session_start();
 include("functions/functions.php");
 
 ?>
@@ -83,7 +83,32 @@ include("functions/functions.php");
 					
 					<span style="float:right; font-size:18px; padding:5px; line-height:40px;">
 					
-					Welcome Guest! <b style="color:yellow">Shopping Cart -</b> Total Items: Total Price: <a href="cart.php" class="btn btn-info btn-lg" style="font-size:11px"><span class="glyphicon glyphicon-shopping-cart" style="font-size:10px"></span> Shopping Cart</a>
+					<?php 
+					if(isset($_SESSION['customer_email'])){
+					echo "<b>Welcome:</b>" . $_SESSION['customer_email'] . "<b style='color:yellow;'>Your</b>" ;
+					}
+					else {
+					echo "<b>Welcome Guest:</b>";
+					}
+					?>
+					
+					<b style="color:yellow">Shopping Cart -</b> Total Items: <?php total_items();?> Total Price: <?php total_price(); ?> <a href="cart.php" class="btn btn-info btn-lg" style="font-size:11px"><span class="glyphicon glyphicon-shopping-cart" style="font-size:10px"></span> Shopping Cart</a>
+					
+					
+					<?php 
+					if(!isset($_SESSION['customer_email'])){
+					
+					echo "<a href='checkout.php' ><button type='button' class='btn btn-info' >Login</button></a>";
+					
+					}
+					else {
+					echo "<a href='logout.php' ><button type='button' class='btn btn-info' >Logout</button></a>";
+					}
+					
+					
+					
+					?>
+					
 					
 					
 					

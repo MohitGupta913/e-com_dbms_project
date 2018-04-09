@@ -43,7 +43,7 @@ include("includes/db.php");
 			  <li><a href="customer/my_account.php">My Account</a></li>
 	          <li><a href="customer_register.php">Sign Up</a></li>
 			  <li><a href="cart.php">Shopping Cart</a></li>
-			  <li><a href="#">Contact Us</a></li>
+	
 
 		
 			
@@ -193,7 +193,7 @@ include("includes/db.php");
 					<tr align="center">
 						<td colspan="2"><input type="submit" name="update_cart" value="Update Cart" class="btn btn-warning"/></td>
 						<td><input type="submit" name="continue" value="Continue Shopping" class="btn btn-warning" /></td>
-						<td><button type="button" class="btn btn-warning"><a href="checkout.php" >Checkout</a></button></td>
+						<td><a href="checkout.php"> <button type="button" class="btn btn-warning">Checkout</button></a></td>
 					</tr>
 					
 				</table> 

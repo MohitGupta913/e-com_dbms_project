@@ -46,7 +46,7 @@ else{
 			  <li><a href="">My Account</a></li>
 	          <li><a href="../customer_register.php">Sign Up</a></li>
 			  <li><a href="../cart.php">Shopping Cart</a></li>
-			  <li><a href="#">Contact Us</a></li>
+		
 			</ul>
 			<form class="navbar-form navbar-left" action="results.php" enctype="multipart/form-data" method="get">
               <div class="input-group">

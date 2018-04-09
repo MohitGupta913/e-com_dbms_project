@@ -42,7 +42,6 @@ include("functions/functions.php");
 			  <li><a href="customer/my_account.php">My Account</a></li>
 	          <li><a href="customer_register.php">Sign Up</a></li>
 			  <li><a href="cart.php">Shopping Cart</a></li>
-			  <li><a href="#">Contact Us</a></li>
 
 			</ul>
 			<form class="navbar-form navbar-left" action="results.php" enctype="multipart/form-data" method="get">
@@ -183,7 +182,7 @@ include("functions/functions.php");
 					</span>
 			</div>
 			
-				<div id="products_box" style="margin-left: 70px; ">
+				<div id="products_box"  >
 	<?php 
 	if(isset($_GET['pro_id'])){
 	
@@ -202,7 +201,7 @@ include("functions/functions.php");
 		$pro_desc = $row_pro['product_desc'];
 	
 		echo "
-				<div id='single_product'>
+				<div id='single_product' style='margin-left: 150px; width: 430px;' >
 				
 					<h3>$pro_title</h3>
 					

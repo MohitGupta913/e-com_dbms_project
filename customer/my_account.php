@@ -48,7 +48,7 @@ else{
 			  <li><a href="../cart.php">Shopping Cart</a></li>
 		
 			</ul>
-			<form class="navbar-form navbar-left" action="results.php" enctype="multipart/form-data" method="get">
+			<form class="navbar-form navbar-left" action="../results.php" enctype="multipart/form-data" method="get">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Search" name="user_query">
                   <div class="input-group-btn">

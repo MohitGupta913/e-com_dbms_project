@@ -183,7 +183,7 @@ include("functions/functions.php");
 					</span>
 			</div>
 			
-				<div id="products_box" style="margin-left: 70px; ">
+				<div id="products_box" style="margin-left: 90px; ">
 	<?php 
 	if(isset($_GET['pro_id'])){
 	
@@ -250,3 +250,16 @@ include("functions/functions.php");
 
 </body>
 </html>
+
+
+
+<?php 
+
+echo "<script>
+$(document).ready(function() {
+	var height = Math.max($('#content_area').height(), $('#sidebar').height());
+	$('#sidebar').height(height);
+	$('#content_area').height(height);
+})</script>";
+
+?>

@@ -231,3 +231,13 @@ include("functions/functions.php");
 <?php cart(); ?>
 
 
+<?php 
+
+echo "<script>
+$(document).ready(function() {
+	var height = Math.max($('#content_area').height(), $('#sidebar').height());
+	$('#sidebar').height(height);
+	$('#content_area').height(height);
+})</script>";
+
+?>

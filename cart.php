@@ -282,6 +282,7 @@ if(isset($_POST['cha_qty'])){
 		}
 	
 	}
+	
 	echo @$up_cart = updatecart();
 	
 	?>

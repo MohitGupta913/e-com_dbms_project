@@ -240,7 +240,7 @@ function getRecomPro(){
 
 	while($row_pr=mysqli_fetch_array($run_pr)){
 		$pro_c = $row_pr['product_cat'];
-		$x = "select * from products where product_cat='$pro_c' order by RAND() LIMIT 0,8";
+		$x = "select * from products where product_cat='$pro_c' order by RAND() LIMIT 0,3";
 
 		$run_pro = mysqli_query($con, $x); 
 		$count_pro = mysqli_num_rows($run_pro);
@@ -276,8 +276,8 @@ function getRecomPro(){
 		
 		}
 	}
-	echo "<br>";
-	if($t_p>0&&$count_p!=0) echo "<h1>Other Products</h1>";
+	
+	if($t_p>0&&$count_p!=0) echo "<br><div><h1>Other Products</h1></div>";
 
 	$xy = "select * from products where product_cat not in (select product_cat from products p inner join orders o on p.product_id = o.p_id where o.c_id='$cust_id' group by product_cat having count(*)>1 order by count(*) desc) order by RAND() LIMIT 0,$t_p";
 

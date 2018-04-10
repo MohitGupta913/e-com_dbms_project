@@ -165,13 +165,15 @@ else {
 
 <?php } ?>
 
+
+
 <?php 
 
 echo "<script>
 $(document).ready(function() {
 	var height = Math.max($('#left').height(), $('#sidebar').height());
-	$('#left').height(height);
 	$('#sidebar').height(height);
+	$('#left').height(height);
 })</script>";
 
 ?>

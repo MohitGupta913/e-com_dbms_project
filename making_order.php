@@ -73,7 +73,7 @@
 				//removing the products from cart
 				$empty_cart = "delete from cart where ip_add='$ip'";
 				$run_cart = mysqli_query($con, $empty_cart);
-				echo "<script>alert('Product placed order successfully!')</script>";
+				echo "<script>alert('Order placed successfully!')</script>";
 				echo "<script>window.open('customer/my_account.php?my_orders','_self')</script>";
 			
 			//$values = array_sum($product_price);

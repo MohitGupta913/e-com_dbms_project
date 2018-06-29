@@ -256,8 +256,8 @@ var isBot = isBot();
             xhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
         console.log(ref);
-        //xhttp.open("POST", "http://web-analytics.pollin.me/insertlog", true);
-        xhttp.open("POST", "http://localhost:3000/insertlog", true);
+        xhttp.open("POST", "http://web-analytics.pollin.me/insertlog", true);
+        //xhttp.open("POST", "http://localhost:3000/insertlog", true);
         xhttp.setRequestHeader("Content-Type", "application/json;chartset=UTF-8");
         var data = JSON.stringify({url:url, date: date, ress: res, ref: ref, time: time,S_id: id, isBot: isBot});
         xhttp.send(data);
